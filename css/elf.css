@@ -25,3 +25,7 @@
     background-color: rgba(200,200,200,0.15);
     border-radius: 4px;
 }
+
+/* HELPER CLASSES */
+
+.center { text-align: center; }
