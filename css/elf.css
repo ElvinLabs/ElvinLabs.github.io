@@ -1,0 +1,27 @@
+.navbar-default {
+    background-image: none;
+    background-repeat: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .open > a {
+    background-image: none;
+    background-repeat: none;
+    box-shadow: none;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+    color: #333;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
+    background-color: rgba(200,200,200,0.15);
+    border-radius: 4px;
+}
