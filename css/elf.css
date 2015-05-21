@@ -1,3 +1,5 @@
+/* OVERRIDES */
+
 .navbar-default {
     background-image: none;
     background-repeat: none;
@@ -26,6 +28,10 @@
     border-radius: 4px;
 }
 
+.container {
+	max-width: 800px;
+}
+
 /* HELPER CLASSES */
 
 .center { text-align: center; }
@@ -38,6 +44,7 @@
 	padding: 9px;
 	border: 3px dashed #eee;
 	border-radius: 9px;
+	margin: 6px;
 }
 
 .id-set {
