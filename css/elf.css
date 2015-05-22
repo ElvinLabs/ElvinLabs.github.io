@@ -24,7 +24,8 @@
 }
 
 .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
-    background-color: rgba(200,200,200,0.15);
+/*    background-color: rgba(200,200,200,0.15);*/
+    background-color: #3698db;
     border-radius: 4px;
 }
 
@@ -47,6 +48,15 @@
 	margin: 6px;
 }
 
+
+.id-block:hover {
+	
+	border: 3px dashed #3698db;
+	
+}
+
 .id-set {
 	padding-top: 20px;
 }
+
+
