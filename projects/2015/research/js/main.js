@@ -11,7 +11,7 @@ function postContactToGoogle() {
         var year = $('input[name="yr"]:checked').val();
         var id = Math.floor((Math.random() * 1000000) + 1); 
         // alert(id);
-            /*$.ajax({
+            $.ajax({
                 url: "https://docs.google.com/forms/d/1L9SncZIaGJCO2aFEWqsBEVOW-26ZVjHJlvZkhNKe8gg/formResponse",
                 data: { "entry.1406130434": gender,
                 "entry.405274992": nationality, "entry.911235950":
@@ -21,15 +21,14 @@ function postContactToGoogle() {
                 statusCode: {
                     0: function () {
                         // alert("0");
-                        window.location.replace("ThankYou.html");
+                        window.location.replace("../instructions/index.html#"+id);
                     },
                     200: function () {
                         // alert("200");
-                        window.location.replace("ThankYou.html");
+                        window.location.replace("../instructions/index.html#"+id);
                     }
                 }
-            });*/
-            window.location.replace("../instructions/index.html#"+id);
+            });
 }
 
 function startImplicit(){
@@ -81,56 +80,57 @@ function postTranslatonToGoogle() {
         var id = (window.location).toString().split('#')[1];
          // alert(Q34);
             $.ajax({
-                url: "https://docs.google.com/forms/d/1XLDiXyjO1jcuLkrzlFMGGJWsK0btmvGnbIE0TsMnASY/formResponse",
+                url: "https://docs.google.com/forms/d/1hrxCOuZNO30EKOGMI9a3kgZ4M9DVaftFj1eaw2lzX28/formResponse",
                 data: { 
-                    "entry.1938129136": id,
-                    // "entry.1257134574": Q01,
-                    // "entry.990806122": Q02, 
-                    // "entry.1715023159": Q03, 
-                    // "entry.1478281001": Q04, 
-                    // "entry.717030021": Q05,
-                    // "entry.1787859164": Q06,
-                    // "entry.1847886742": Q07, 
-                    // "entry.73379146": Q08, 
-                    // "entry.1383086265": Q09, 
-                    // "entry.1294203626": Q10,
-                    // "entry.1061195456": Q11,
-                    // "entry.1338914658": Q12, 
-                    // "entry.23628511": Q13, 
-                    // "entry.365421779": Q14, 
-                    // "entry.517382607": Q15,
-                    // "entry.1355096368": Q16,
-                    // "entry.1588564186": Q17, 
-                    // "entry.2114137528": Q18, 
-                    // "entry.1000525453": Q19, 
-                    // "entry.965029355": Q20,
-                    // "entry.1316189115": Q21,
-                    // "entry.1214979730": Q22, 
-                    // "entry.5430431": Q23, 
-                    // "entry.1809279893": Q24, 
-                    // "entry.1639678638": Q25,
-                    // "entry.1678098973": Q26,
-                    // "entry.781692084": Q27, 
-                    // "entry.1899939120": Q28, 
-                    // "entry.1632590199": Q29, 
-                    // "entry.1453249927": Q30,
-                    // "entry.1803770133": Q31,
-                    // "entry.1978393813": Q32, 
-                    // "entry.295473656": Q33, 
-                    "entry.442765408": Q34 
+                    "entry.1231102897": id,
+                    "entry.1145627788": Q01,
+                    "entry.1063036401": Q02, 
+                    "entry.99503744": Q03, 
+                    "entry.27329915": Q04, 
+                    "entry.874539017": Q05,
+                    /*"entry.1504474377": Q06,
+                    "entry.244884792": Q07, 
+                    "entry.943421634": Q08, 
+                    "entry.1133563758": Q09, 
+                    "entry.581674732": Q10,
+                    "entry.1091644268": Q11,
+                    "entry.536674163": Q12, 
+                    "entry.23628511": Q13, 
+                    "entry.365421779": Q14, 
+                    "entry.685360834": Q15
+                    "entry.1221279935": Q16,
+                    "entry.1087670815": Q17, 
+                    "entry.1060588509": Q18, 
+                    "entry.1981006741": Q19, 
+                    "entry.965029355": Q20,
+                    "entry.404879522": Q21,
+                    "entry.983957449": Q22, 
+                    "entry.352790619": Q23, 
+                    "entry.318772959": Q24, 
+                    "entry.820554948": Q25,
+                    "entry.1664099026": Q26,
+                    "entry.984518721": Q27, 
+                    "entry.1330830829": Q28, 
+                    "entry.74245676": Q29, 
+                    "entry.1020820635": Q30,
+                    "entry.471808136": Q31,
+                    "entry.309099364": Q32, 
+                    "entry.295473656": Q33, 
+                    "entry.869532277": Q34 */
                 },
                 type: "POST",
                 dataType: "xml",
                 statusCode: {
                     0: function () {
-                         alert("Error 0");
-                        // window.location.replace("ThankYou.html");
+                        // alert("Error 0");
+                        window.location.replace("../scenarios1/index.html#"+id);
                     },
                     200: function () {
-                         alert("Success 200");
-                        // window.location.replace("ThankYou.html");
+                         // alert("Success 200");
+                        window.location.replace("../scenarios1/index.html#"+id);
                     }
                 }
             });
             // window.location.replace("../instructions/index.html#"+id);
 }
+
