@@ -103,3 +103,59 @@ function postTranslatonToGoogle() {
             window.location.replace("../scenarios1/index.html#"+id);
 }
 
+function postScenario1ToGoogle() {
+        // alert("called");
+        var Q01 = $('input[name="q01"]:checked').val();
+        var Q02 = $('input[name="q02"]:checked').val();
+        var Q03 = $('input[name="q03"]:checked').val();
+        var Q04 = $('input[name="q04"]:checked').val();
+        var Q05 = $('input[name="q05"]:checked').val();
+        var Q06 = $('input[name="q06"]:checked').val();
+        var Q07 = $('input[name="q07"]:checked').val();
+        var Q08 = $('input[name="q08"]:checked').val();
+        var Q09 = $('input[name="q09"]:checked').val();
+        var Q10 = $('input[name="q10"]:checked').val();
+        var Q11 = $('input[name="q11"]:checked').val();
+        var Q12 = $('input[name="q12"]:checked').val();
+        var Q13 = $('input[name="q13"]:checked').val();
+        var Q14 = $('input[name="q14"]:checked').val();
+        var Q15 = $('input[name="q15"]:checked').val();
+        var Q16 = $('input[name="q16"]:checked').val();
+        var Q17 = $('input[name="q17"]:checked').val();
+        var Q18 = $('input[name="q18"]:checked').val();
+        var Q19 = $('input[name="q19"]:checked').val();
+        var Q20 = $('input[name="q20"]:checked').val();
+        var Q21 = $('input[name="q21"]:checked').val();
+        var Q22 = $('input[name="q22"]:checked').val();
+        var Q23 = $('input[name="q23"]:checked').val();
+        var Q24 = $('input[name="q24"]:checked').val();
+        var Q25 = $('input[name="q25"]:checked').val();
+        var Q26 = $('input[name="q26"]:checked').val();
+        var Q27 = $('input[name="q27"]:checked').val();
+        var Q28 = $('input[name="q28"]:checked').val();
+        var Q29 = $('input[name="q29"]:checked').val();
+        var Q30 = $('input[name="q30"]:checked').val();
+        var Q = Q01+","+Q02+","+Q03+","+Q04+","+Q05+","+Q06+","+Q07+","+Q08+","+Q09+","+Q10+","+Q11+","+Q12+","+Q13+","+Q14+","+Q15+","+Q16+","+Q17+","+Q18+","+Q19+","+Q20+","+Q21+","+Q22+","+Q23+","+Q24+","+Q25+","+Q26+","+Q27+","+Q28+","+Q29+","+Q30;
+        var id = (window.location).toString().split('#')[1];
+         // alert(Q34);
+            $.ajax({
+                url: "https://docs.google.com/forms/d/1WHU61xX_ZN9c7QDVOLu0GU2IjbuD3UPYE2NyHZznz4g/formResponse",
+                data: { 
+                    "entry.1426726444": id,
+                    "entry.1874854669": Q
+                },
+                type: "POST",
+                dataType: "xml",
+                statusCode: {
+                    0: function () {
+                        // alert("Error 0");
+                        window.location.replace("../scenarios1/index.html#"+id);
+                    },
+                    200: function () {
+                         // alert("Success 200");
+                        window.location.replace("../scenarios1/index.html#"+id);
+                    }
+                }
+            });
+            window.location.replace("../scenarios1/index.html#"+id);
+}
