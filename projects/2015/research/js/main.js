@@ -11,7 +11,7 @@ function postContactToGoogle() {
         var year = $('input[name="yr"]:checked').val();
         var id = Math.floor((Math.random() * 1000000) + 1); 
         // alert(id);
-            $.ajax({
+            /*$.ajax({
                 url: "https://docs.google.com/forms/d/1L9SncZIaGJCO2aFEWqsBEVOW-26ZVjHJlvZkhNKe8gg/formResponse",
                 data: { "entry.1406130434": gender,
                 "entry.405274992": nationality, "entry.911235950":
@@ -28,7 +28,8 @@ function postContactToGoogle() {
                         window.location.replace("../instructions/index.html#"+id);
                     }
                 }
-            });
+            });*/
+            window.location.replace("../instructions/index.html#"+id);
 }
 
 function startImplicit(){
@@ -77,46 +78,14 @@ function postTranslatonToGoogle() {
         var Q32 = $('input[name="q32"]:checked').val();
         var Q33 = $('input[name="q33"]:checked').val();
         var Q34 = $('input[name="q34"]:checked').val();
+        var Q = Q01+","+Q02+","+Q03+","+Q04+","+Q05+","+Q06+","+Q07+","+Q08+","+Q09+","+Q10+","+Q11+","+Q12+","+Q13+","+Q14+","+Q15+","+Q16+","+Q17+","+Q18+","+Q19+","+Q20+","+Q21+","+Q22+","+Q23+","+Q24+","+Q25+","+Q26+","+Q27+","+Q28+","+Q29+","+Q30+","+Q31+","+Q32+","+Q33+","+Q34;
         var id = (window.location).toString().split('#')[1];
          // alert(Q34);
-            $.ajax({
-                url: "https://docs.google.com/forms/d/1hrxCOuZNO30EKOGMI9a3kgZ4M9DVaftFj1eaw2lzX28/formResponse",
+            /*$.ajax({
+                url: "https://docs.google.com/forms/d/1kJzgutXoCCJ-SCL_I6ONmLsKO3xZvTdvlywzmjlQQdo/formResponse",
                 data: { 
-                    "entry.1231102897": id,
-                    "entry.1145627788": Q01,
-                    "entry.1063036401": Q02, 
-                    "entry.99503744": Q03, 
-                    "entry.27329915": Q04, 
-                    "entry.874539017": Q05,
-                    /*"entry.1504474377": Q06,
-                    "entry.244884792": Q07, 
-                    "entry.943421634": Q08, 
-                    "entry.1133563758": Q09, 
-                    "entry.581674732": Q10,
-                    "entry.1091644268": Q11,
-                    "entry.536674163": Q12, 
-                    "entry.23628511": Q13, 
-                    "entry.365421779": Q14, 
-                    "entry.685360834": Q15
-                    "entry.1221279935": Q16,
-                    "entry.1087670815": Q17, 
-                    "entry.1060588509": Q18, 
-                    "entry.1981006741": Q19, 
-                    "entry.965029355": Q20,
-                    "entry.404879522": Q21,
-                    "entry.983957449": Q22, 
-                    "entry.352790619": Q23, 
-                    "entry.318772959": Q24, 
-                    "entry.820554948": Q25,
-                    "entry.1664099026": Q26,
-                    "entry.984518721": Q27, 
-                    "entry.1330830829": Q28, 
-                    "entry.74245676": Q29, 
-                    "entry.1020820635": Q30,
-                    "entry.471808136": Q31,
-                    "entry.309099364": Q32, 
-                    "entry.295473656": Q33, 
-                    "entry.869532277": Q34 */
+                    "entry.1129400515": id,
+                    "entry.426332218": Q
                 },
                 type: "POST",
                 dataType: "xml",
@@ -130,7 +99,7 @@ function postTranslatonToGoogle() {
                         window.location.replace("../scenarios1/index.html#"+id);
                     }
                 }
-            });
-            // window.location.replace("../instructions/index.html#"+id);
+            });*/
+            window.location.replace("../scenarios1/index.html#"+id);
 }
 
