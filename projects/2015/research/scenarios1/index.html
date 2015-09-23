@@ -10,305 +10,331 @@
     <script type="text/javascript" src="../js/main.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <style type="text/css">
+        body{
+            background-color: #fafafa;
+        }
+        .list-group-item {
+            display: list-item;
+        }
+        .space-sides{
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .space-top{
+            padding-top: 10px;
+        }
+        .space-bottom{
+            padding-bottom: 5px;
+        }
+    </style>
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
 
 <body>
-  	<h3>පහත සඳහන් සිදුවීම් කියවා, ඔබගේ අදහසට අනුව සෑම සිදුවීම් විස්තරයක් පහළින් දිස්වන ප‍්‍රශ්නවලට අදාල පිළිතුර මත click කරන්න.    </h3>
-    <ol>
-        <li>කමලාගේ සැමියා වෙහෙසකාරි දිනකට පසු හවස්වි නිවසට පැමිණියේය. අවාසනාවට ඇය අතින් රාත‍්‍රී වේල උයන අතරතුර පිලිස්සුනි. මෙයින් කෝපයට පත්වු සැමියා ඇයට පහරදිය.
-            <ul>
-                <li>ඔබ ඔහුගේ ප‍්‍රතිචාරයට එකඟවන්නේද?
-                    <ul>
-                      	<li><input type="radio" name="q01" value="Yes" role="radio" required="" aria-required="true">එකඟවෙමි</li>
-                        <li><input type="radio" name="q01" value="Neither agree nor disagree" role="radio" required="" aria-required="true">එකඟවන්නේත් නැත එකඟ නොවන්නේත් නැත</li>
-                        <li><input type="radio" name="q01" value="No" role="radio" required="" aria-required="true">කිසිසේත් එකඟ නොවෙමි</li>
-                    </ul>
-                </li>
-                <li>ඔබ මෙම විස්තරය කියවා කෝපයට පත්වූවාද?
-                    <ul>
-                        <li><input type="radio" name="q02" value="Very much" role="radio" required="" aria-required="true">බොහෝ දුරට</li>
-                        <li><input type="radio" name="q02" value="Somewhat" role="radio" required="" aria-required="true">තරමක් දුරට</li>
-                        <li><input type="radio" name="q02" value="Netural" role="radio" required="" aria-required="true">විශේෂයක් නැත</li>
-                        <li><input type="radio" name="q02" value="Not so much" role="radio" required="" aria-required="true">එතරම් නැත</li>
-                        <li><input type="radio" name="q02" value="Not at all" role="radio" required="" aria-required="true">කිසිසේත් නැත</li>
-                    </ul>
-                </li>
-                <li>මෙය ඔබ ඉදිරියේ සිදුවුවා නම් එයට මැදිහත් වනවාද?
-                    <ul>
-                        <li><input type="radio" name="q03" value="Strongly agree" role="radio" required="" aria-required="true">බොහෝ දුරට</li>
-                        <li><input type="radio" name="q03" value="Agree" role="radio" required="" aria-required="true">තරමක් දුරට</li>
-                        <li><input type="radio" name="q03" value="Neither agree nor disagree" role="radio" required="" aria-required="true">විශේෂයක් නැත</li>
-                        <li><input type="radio" name="q03" value="Disagree" role="radio" required="" aria-required="true">එතරම් නැත</li>
-                        <li><input type="radio" name="q03" value="Strongly disagree" role="radio" required="" aria-required="true">කිසිසේත් නැත</li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <li>යුවතියක් තරමක් තද වූ ඇඳුමින් සැරසී අඩි සපත්තු පලඳා ගොඩනගන ඉඩමක් පසුකර ගියාය. ඇය දුටු විගස එහි කුලීකරුවන් ඇයට අපහාසාත්මක ලෙස කෑගසන ලදි.
-            <ul>
-                <li>ඔබ ඔහුගේ ප‍්‍රතිචාරයට එකඟවන්නේද?
-                    <ul>
-                        <li><input type="radio" name="q04" value="Yes" role="radio" required="" aria-required="true">එකඟවෙමි</li>
-                        <li><input type="radio" name="q04" value="Neither agree nor disagree" role="radio" required="" aria-required="true">එකඟවන්නේත් නැත එකඟ නොවන්නේත් නැත</li>
-                        <li><input type="radio" name="q04" value="No" role="radio" required="" aria-required="true">කිසිසේත් එකඟ නොවෙමි</li>
-                    </ul>
-                </li>
-                <li>ඔබ මෙම විස්තරය කියවා කෝපයට පත්වූවාද?
-                    <ul>
-                        <li><input type="radio" name="q05" value="Very much" role="radio" required="" aria-required="true">බොහෝ දුරට</li>
-                        <li><input type="radio" name="q05" value="Somewhat" role="radio" required="" aria-required="true">තරමක් දුරට</li>
-                        <li><input type="radio" name="q05" value="Netural" role="radio" required="" aria-required="true">විශේෂයක් නැත</li>
-                        <li><input type="radio" name="q05" value="Not so much" role="radio" required="" aria-required="true">එතරම් නැත</li>
-                        <li><input type="radio" name="q05" value="Not at all" role="radio" required="" aria-required="true">කිසිසේත් නැත</li>
-                    </ul>
-                </li>
-                <li>මෙය ඔබ ඉදිරියේ සිදුවුවා නම් එයට මැදිහත් වනවාද?
-                    <ul>
-                        <li><input type="radio" name="q06" value="Strongly agree" role="radio" required="" aria-required="true">බොහෝ දුරට</li>
-                        <li><input type="radio" name="q06" value="Agree" role="radio" required="" aria-required="true">තරමක් දුරට</li>
-                        <li><input type="radio" name="q06" value="Neither agree nor disagree" role="radio" required="" aria-required="true">විශේෂයක් නැත</li>
-                        <li><input type="radio" name="q06" value="Disagree" role="radio" required="" aria-required="true">එතරම් නැත</li>
-                        <li><input type="radio" name="q06" value="Strongly disagree" role="radio" required="" aria-required="true">කිසිසේත් නැත</li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <li>නිත්‍යා තම යෙහෙලියන් සමඟ එදින නාට්‍ය නැරඹීමට සූදානම් විය නමුත් ඇයගේ පෙම්වතා ඇයට හොස්ටල් කාමරයෙන් පිට යාමට තහනම් කලේය. එය මන්ද යත් ඔහු නොමැති නිසා ඇයට තනියම යාමට අකමැති වූ හෙයින්.
-            <ul>
-                <li>ඔබ ඔහුගේ ප‍්‍රතිචාරයට එකඟවන්නේද?
-                    <ul>
-                        <li><input type="radio" name="q07" value="Yes" role="radio" required="" aria-required="true">එකඟවෙමි</li>
-                        <li><input type="radio" name="q07" value="Neither agree nor disagree" role="radio" required="" aria-required="true">එකඟවන්නේත් නැත එකඟ නොවන්නේත් නැත</li>
-                        <li><input type="radio" name="q07" value="No" role="radio" required="" aria-required="true">කිසිසේත් එකඟ නොවෙමි</li>
-                    </ul>
-                </li>
-                <li>ඔබ මෙම විස්තරය කියවා කෝපයට පත්වූවාද?
-                    <ul>
-                        <li><input type="radio" name="q08" value="Very much" role="radio" required="" aria-required="true">බොහෝ දුරට</li>
-                        <li><input type="radio" name="q08" value="Somewhat" role="radio" required="" aria-required="true">තරමක් දුරට</li>
-                        <li><input type="radio" name="q08" value="Netural" role="radio" required="" aria-required="true">විශේෂයක් නැත</li>
-                        <li><input type="radio" name="q08" value="Not so much" role="radio" required="" aria-required="true">එතරම් නැත</li>
-                        <li><input type="radio" name="q08" value="Not at all" role="radio" required="" aria-required="true">කිසිසේත් නැත</li>
-                    </ul>
-                </li>
-                <li>මෙය ඔබ ඉදිරියේ සිදුවුවා නම් එයට මැදිහත් වනවාද?
-                    <ul>
-                        <li><input type="radio" name="q09" value="Strongly agree" role="radio" required="" aria-required="true">බොහෝ දුරට</li>
-                        <li><input type="radio" name="q09" value="Agree" role="radio" required="" aria-required="true">තරමක් දුරට</li>
-                        <li><input type="radio" name="q09" value="Neither agree nor disagree" role="radio" required="" aria-required="true">විශේෂයක් නැත</li>
-                        <li><input type="radio" name="q09" value="Disagree" role="radio" required="" aria-required="true">එතරම් නැත</li>
-                        <li><input type="radio" name="q09" value="Strongly disagree" role="radio" required="" aria-required="true">කිසිසේත් නැත</li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <li>ගාමන්ට් ෆැක්ටරියේ රාත‍්‍රී බාගය වැඩකල කාන්තාවක් තනියම බස් නැවතුම්පල සිට තම නිවසට යාමට සිදුවිය. එසේ යනවිට ඇයට කළුවර වූ පටුමගක සිටි බේබද්දෙකු විසින් නවතා ¥ෂණය කලේය. 
-            <ul>
-                <li>ඔබ ඔහුගේ ප‍්‍රතිචාරයට එකඟවන්නේද?
-                    <ul>
-                        <li><input type="radio" name="q10" value="Yes" role="radio" required="" aria-required="true">එකඟවෙමි</li>
-                        <li><input type="radio" name="q10" value="Neither agree nor disagree" role="radio" required="" aria-required="true">එකඟවන්නේත් නැත එකඟ නොවන්නේත් නැත</li>
-                        <li><input type="radio" name="q10" value="No" role="radio" required="" aria-required="true">කිසිසේත් එකඟ නොවෙමි</li>
-                    </ul>
-                </li>
-                <li>ඔබ මෙම විස්තරය කියවා කෝපයට පත්වූවාද?
-                    <ul>
-                        <li><input type="radio" name="q11" value="Very much" role="radio" required="" aria-required="true">බොහෝ දුරට</li>
-                        <li><input type="radio" name="q11" value="Somewhat" role="radio" required="" aria-required="true">තරමක් දුරට</li>
-                        <li><input type="radio" name="q11" value="Netural" role="radio" required="" aria-required="true">විශේෂයක් නැත</li>
-                        <li><input type="radio" name="q11" value="Not so much" role="radio" required="" aria-required="true">එතරම් නැත</li>
-                        <li><input type="radio" name="q11" value="Not at all" role="radio" required="" aria-required="true">කිසිසේත් නැත</li>
-                    </ul>
-                </li>
-                <li>මෙය ඔබ ඉදිරියේ සිදුවුවා නම් එයට මැදිහත් වනවාද?
-                    <ul>
-                        <li><input type="radio" name="q12" value="Strongly agree" role="radio" required="" aria-required="true">බොහෝ දුරට</li>
-                        <li><input type="radio" name="q12" value="Agree" role="radio" required="" aria-required="true">තරමක් දුරට</li>
-                        <li><input type="radio" name="q12" value="Neither agree nor disagree" role="radio" required="" aria-required="true">විශේෂයක් නැත</li>
-                        <li><input type="radio" name="q12" value="Disagree" role="radio" required="" aria-required="true">එතරම් නැත</li>
-                        <li><input type="radio" name="q12" value="Strongly disagree" role="radio" required="" aria-required="true">කිසිසේත් නැත</li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <li>නීනා සහ ඇගේ සැමියා රාජ්‍ය සේවයේ නිරත වේ. ඇයගේ සම්පූර්ණ පඩිය සැමියාට ලබාදිය යුත්තේ ඔහු ”මුදල් කළමනාකරණයට වඩාත් සුදුසු නිසාය” ඇය මෙම මාසයේ පඩිය ඔහුට නොදුන් බැවින් ඇයට කුණුහරපින් බැනවැදුනේය.
-            <ul>
-                <li>ඔබ ඔහුගේ ප‍්‍රතිචාරයට එකඟවන්නේද?
-                    <ul>
-                        <li><input type="radio" name="q13" value="Yes" role="radio" required="" aria-required="true">එකඟවෙමි</li>
-                        <li><input type="radio" name="q13" value="Neither agree nor disagree" role="radio" required="" aria-required="true">එකඟවන්නේත් නැත එකඟ නොවන්නේත් නැත</li>
-                        <li><input type="radio" name="q13" value="No" role="radio" required="" aria-required="true">කිසිසේත් එකඟ නොවෙමි</li>
-                    </ul>
-                </li>
-                <li>ඔබ මෙම විස්තරය කියවා කෝපයට පත්වූවාද?
-                    <ul>
-                        <li><input type="radio" name="q14" value="Very much" role="radio" required="" aria-required="true">බොහෝ දුරට</li>
-                        <li><input type="radio" name="q14" value="Somewhat" role="radio" required="" aria-required="true">තරමක් දුරට</li>
-                        <li><input type="radio" name="q14" value="Netural" role="radio" required="" aria-required="true">විශේෂයක් නැත</li>
-                        <li><input type="radio" name="q14" value="Not so much" role="radio" required="" aria-required="true">එතරම් නැත</li>
-                        <li><input type="radio" name="q14" value="Not at all" role="radio" required="" aria-required="true">කිසිසේත් නැත</li>
-                    </ul>
-                </li>
-                <li>මෙය ඔබ ඉදිරියේ සිදුවුවා නම් එයට මැදිහත් වනවාද?
-                    <ul>
-                        <li><input type="radio" name="q15" value="Strongly agree" role="radio" required="" aria-required="true">බොහෝ දුරට</li>
-                        <li><input type="radio" name="q15" value="Agree" role="radio" required="" aria-required="true">තරමක් දුරට</li>
-                        <li><input type="radio" name="q15" value="Neither agree nor disagree" role="radio" required="" aria-required="true">විශේෂයක් නැත</li>
-                        <li><input type="radio" name="q15" value="Disagree" role="radio" required="" aria-required="true">එතරම් නැත</li>
-                        <li><input type="radio" name="q15" value="Strongly disagree" role="radio" required="" aria-required="true">කිසිසේත් නැත</li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <li>ෂෙනාලී පසුගිය අවුරුදු 10 තිස්සේ වැඩකරන රැකියා ස්ථානයේ උසස්වීම ලැබීමට නියමිත විය. නමුත් එම උසස්වීම මෑතකදී රස්සාවට ආ සුරේෂ්ට පිරිනැමුනි. එසේ කිරීමට හේතුව විමසූ විට එය ”පිරිමීන් වඩාත් හොඳ කළමනාකරු වන බැවින්”යැයි අධ්‍යක්ෂන මණ්ඩලය පවසා සිටියෝය. 
-            <ul>
-                <li>ඔබ ඔහුගේ ප‍්‍රතිචාරයට එකඟවන්නේද?
-                    <ul>
-                        <li><input type="radio" name="q16" value="Yes" role="radio" required="" aria-required="true">එකඟවෙමි</li>
-                        <li><input type="radio" name="q16" value="Neither agree nor disagree" role="radio" required="" aria-required="true">එකඟවන්නේත් නැත එකඟ නොවන්නේත් නැත</li>
-                        <li><input type="radio" name="q16" value="No" role="radio" required="" aria-required="true">කිසිසේත් එකඟ නොවෙමි</li>
-                    </ul>
-                </li>
-                <li>ඔබ මෙම විස්තරය කියවා කෝපයට පත්වූවාද?
-                    <ul>
-                        <li><input type="radio" name="q17" value="Very much" role="radio" required="" aria-required="true">බොහෝ දුරට</li>
-                        <li><input type="radio" name="q17" value="Somewhat" role="radio" required="" aria-required="true">තරමක් දුරට</li>
-                        <li><input type="radio" name="q17" value="Netural" role="radio" required="" aria-required="true">විශේෂයක් නැත</li>
-                        <li><input type="radio" name="q17" value="Not so much" role="radio" required="" aria-required="true">එතරම් නැත</li>
-                        <li><input type="radio" name="q17" value="Not at all" role="radio" required="" aria-required="true">කිසිසේත් නැත</li>
-                    </ul>
-                </li>
-                <li>මෙය ඔබ ඉදිරියේ සිදුවුවා නම් එයට මැදිහත් වනවාද?
-                    <ul>
-                        <li><input type="radio" name="q18" value="Strongly agree" role="radio" required="" aria-required="true">බොහෝ දුරට</li>
-                        <li><input type="radio" name="q18" value="Agree" role="radio" required="" aria-required="true">තරමක් දුරට</li>
-                        <li><input type="radio" name="q18" value="Neither agree nor disagree" role="radio" required="" aria-required="true">විශේෂයක් නැත</li>
-                        <li><input type="radio" name="q18" value="Disagree" role="radio" required="" aria-required="true">එතරම් නැත</li>
-                        <li><input type="radio" name="q18" value="Strongly disagree" role="radio" required="" aria-required="true">කිසිසේත් නැත</li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <li>තම ප‍්‍රචන්ඩකාරී සැමියාට එරෙහිව පැමිණිල්ලක් දැමිමට කාන්තාවක් තම සොයුරිය සමඟ යාමට කතාකරගත්තාය. සොයුරිය මඟින් එය දැනගත් සැමියා එසේ නැවත කිරීමට සිතුවොත් ඇය හා තමන් කුස්සි පිහියෙන් මරාගන්නා බව පැවසුවේය.
-            <ul>
-                <li>ඔබ ඔහුගේ ප‍්‍රතිචාරයට එකඟවන්නේද?
-                    <ul>
-                        <li><input type="radio" name="q19" value="Yes" role="radio" required="" aria-required="true">එකඟවෙමි</li>
-                        <li><input type="radio" name="q19" value="Neither agree nor disagree" role="radio" required="" aria-required="true">එකඟවන්නේත් නැත එකඟ නොවන්නේත් නැත</li>
-                        <li><input type="radio" name="q19" value="No" role="radio" required="" aria-required="true">කිසිසේත් එකඟ නොවෙමි</li>
-                    </ul>
-                </li>
-                <li>ඔබ මෙම විස්තරය කියවා කෝපයට පත්වූවාද?
-                    <ul>
-                        <li><input type="radio" name="q20" value="Very much" role="radio" required="" aria-required="true">බොහෝ දුරට</li>
-                        <li><input type="radio" name="q20" value="Somewhat" role="radio" required="" aria-required="true">තරමක් දුරට</li>
-                        <li><input type="radio" name="q20" value="Netural" role="radio" required="" aria-required="true">විශේෂයක් නැත</li>
-                        <li><input type="radio" name="q20" value="Not so much" role="radio" required="" aria-required="true">එතරම් නැත</li>
-                        <li><input type="radio" name="q20" value="Not at all" role="radio" required="" aria-required="true">කිසිසේත් නැත</li>
-                    </ul>
-                </li>
-                <li>මෙය ඔබ ඉදිරියේ සිදුවුවා නම් එයට මැදිහත් වනවාද?
-                    <ul>
-                        <li><input type="radio" name="q21" value="Strongly agree" role="radio" required="" aria-required="true">බොහෝ දුරට</li>
-                        <li><input type="radio" name="q21" value="Agree" role="radio" required="" aria-required="true">තරමක් දුරට</li>
-                        <li><input type="radio" name="q21" value="Neither agree nor disagree" role="radio" required="" aria-required="true">විශේෂයක් නැත</li>
-                        <li><input type="radio" name="q21" value="Disagree" role="radio" required="" aria-required="true">එතරම් නැත</li>
-                        <li><input type="radio" name="q21" value="Strongly disagree" role="radio" required="" aria-required="true">කිසිසේත් නැත</li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <li>රුචිකාගේ පෙම්වතා ඇයගේ මිතුරියන්ට අකමැතිය. ඔවුන්ගේ ආශ‍්‍රය නතර කර තමා එක්ක වැඩිපුර කල්ගෙවීමට පැවසූයේ ඔහු ඇයට ගොඩක් ආදරය කරන බැවින් හා ඔහු වෙත ඇයගේ සියලූම අවධානය යොමුවිය යුතු නිසාය.
-            <ul>
-                <li>ඔබ ඔහුගේ ප‍්‍රතිචාරයට එකඟවන්නේද?
-                    <ul>
-                        <li><input type="radio" name="q22" value="Yes" role="radio" required="" aria-required="true">එකඟවෙමි</li>
-                        <li><input type="radio" name="q22" value="Neither agree nor disagree" role="radio" required="" aria-required="true">එකඟවන්නේත් නැත එකඟ නොවන්නේත් නැත</li>
-                        <li><input type="radio" name="q22" value="No" role="radio" required="" aria-required="true">කිසිසේත් එකඟ නොවෙමි</li>
-                    </ul>
-                </li>
-                <li>ඔබ මෙම විස්තරය කියවා කෝපයට පත්වූවාද?
-                    <ul>
-                        <li><input type="radio" name="q23" value="Very much" role="radio" required="" aria-required="true">බොහෝ දුරට</li>
-                        <li><input type="radio" name="q23" value="Somewhat" role="radio" required="" aria-required="true">තරමක් දුරට</li>
-                        <li><input type="radio" name="q23" value="Netural" role="radio" required="" aria-required="true">විශේෂයක් නැත</li>
-                        <li><input type="radio" name="q23" value="Not so much" role="radio" required="" aria-required="true">එතරම් නැත</li>
-                        <li><input type="radio" name="q23" value="Not at all" role="radio" required="" aria-required="true">කිසිසේත් නැත</li>
-                    </ul>
-                </li>
-                <li>මෙය ඔබ ඉදිරියේ සිදුවුවා නම් එයට මැදිහත් වනවාද?
-                    <ul>
-                        <li><input type="radio" name="q24" value="Strongly agree" role="radio" required="" aria-required="true">බොහෝ දුරට</li>
-                        <li><input type="radio" name="q24" value="Agree" role="radio" required="" aria-required="true">තරමක් දුරට</li>
-                        <li><input type="radio" name="q24" value="Neither agree nor disagree" role="radio" required="" aria-required="true">විශේෂයක් නැත</li>
-                        <li><input type="radio" name="q24" value="Disagree" role="radio" required="" aria-required="true">එතරම් නැත</li>
-                        <li><input type="radio" name="q24" value="Strongly disagree" role="radio" required="" aria-required="true">කිසිසේත් නැත</li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <li>ශාන්තී තම සැමියා සමඟ, ඇතැම් දවස්වල අකමැති වූවද, ලිංගික කටයුතු වල යෙදීම අනිවාර්්‍ය වි ඇත. ඔහුට අනුව ඇයට විරුද්ධවීමට නොහැක්කේ ඔවුන් විවාහක නිසත් ඔහුගේ ලිංගික ආශාවන් ඇය තුලින් ඉෂ්ට විය යුතු නිසාත්ය.
-            <ul>
-                <li>ඔබ ඔහුගේ ප‍්‍රතිචාරයට එකඟවන්නේද?
-                    <ul>
-                        <li><input type="radio" name="q25" value="Yes" role="radio" required="" aria-required="true">එකඟවෙමි</li>
-                        <li><input type="radio" name="q25" value="Neither agree nor disagree" role="radio" required="" aria-required="true">එකඟවන්නේත් නැත එකඟ නොවන්නේත් නැත</li>
-                        <li><input type="radio" name="q25" value="No" role="radio" required="" aria-required="true">කිසිසේත් එකඟ නොවෙමි</li>
-                    </ul>
-                </li>
-                <li>ඔබ මෙම විස්තරය කියවා කෝපයට පත්වූවාද?
-                    <ul>
-                        <li><input type="radio" name="q26" value="Very much" role="radio" required="" aria-required="true">බොහෝ දුරට</li>
-                        <li><input type="radio" name="q26" value="Somewhat" role="radio" required="" aria-required="true">තරමක් දුරට</li>
-                        <li><input type="radio" name="q26" value="Netural" role="radio" required="" aria-required="true">විශේෂයක් නැත</li>
-                        <li><input type="radio" name="q26" value="Not so much" role="radio" required="" aria-required="true">එතරම් නැත</li>
-                        <li><input type="radio" name="q26" value="Not at all" role="radio" required="" aria-required="true">කිසිසේත් නැත</li>
-                    </ul>
-                </li>
-                <li>මෙය ඔබ ඉදිරියේ සිදුවුවා නම් එයට මැදිහත් වනවාද?
-                    <ul>
-                        <li><input type="radio" name="q27" value="Strongly agree" role="radio" required="" aria-required="true">බොහෝ දුරට</li>
-                        <li><input type="radio" name="q27" value="Agree" role="radio" required="" aria-required="true">තරමක් දුරට</li>
-                        <li><input type="radio" name="q27" value="Neither agree nor disagree" role="radio" required="" aria-required="true">විශේෂයක් නැත</li>
-                        <li><input type="radio" name="q27" value="Disagree" role="radio" required="" aria-required="true">එතරම් නැත</li>
-                        <li><input type="radio" name="q27" value="Strongly disagree" role="radio" required="" aria-required="true">කිසිසේත් නැත</li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <li>උසස් පෙල ලිවීමෙන් පසු ලක්ෂ්මීට රියදුරු බලපත‍්‍රයක් ගැනීමට උවමනා විය. එය පිළිබඳව තම මව සමඟ පවසන අතරතුර එය ඇසුණු තම සොයුරා එය නොකිරිමට අවවාද කලේ ”ගෑණුන්ට එලවගන්නත් බෑ, පිරිමි අපට නිවීහැනහිල්ලේ පාරේ යන්නත් නෑ” යැයි පවසමින්.
-            <ul>
-                <li>ඔබ ඔහුගේ ප‍්‍රතිචාරයට එකඟවන්නේද?
-                    <ul>
-                        <li><input type="radio" name="q28" value="Yes" role="radio" required="" aria-required="true">එකඟවෙමි</li>
-                        <li><input type="radio" name="q28" value="Neither agree nor disagree" role="radio" required="" aria-required="true">එකඟවන්නේත් නැත එකඟ නොවන්නේත් නැත</li>
-                        <li><input type="radio" name="q28" value="No" role="radio" required="" aria-required="true">කිසිසේත් එකඟ නොවෙමි</li>
-                    </ul>
-                </li>
-                <li>ඔබ මෙම විස්තරය කියවා කෝපයට පත්වූවාද?
-                    <ul>
-                        <li><input type="radio" name="q29" value="Very much" role="radio" required="" aria-required="true">බොහෝ දුරට</li>
-                        <li><input type="radio" name="q29" value="Somewhat" role="radio" required="" aria-required="true">තරමක් දුරට</li>
-                        <li><input type="radio" name="q29" value="Netural" role="radio" required="" aria-required="true">විශේෂයක් නැත</li>
-                        <li><input type="radio" name="q29" value="Not so much" role="radio" required="" aria-required="true">එතරම් නැත</li>
-                        <li><input type="radio" name="q29" value="Not at all" role="radio" required="" aria-required="true">කිසිසේත් නැත</li>
-                    </ul>
-                </li>
-                <li>මෙය ඔබ ඉදිරියේ සිදුවුවා නම් එයට මැදිහත් වනවාද?
-                    <ul>
-                        <li><input type="radio" name="q30" value="Strongly agree" role="radio" required="" aria-required="true">බොහෝ දුරට</li>
-                        <li><input type="radio" name="q30" value="Agree" role="radio" required="" aria-required="true">තරමක් දුරට</li>
-                        <li><input type="radio" name="q30" value="Neither agree nor disagree" role="radio" required="" aria-required="true">විශේෂයක් නැත</li>
-                        <li><input type="radio" name="q30" value="Disagree" role="radio" required="" aria-required="true">එතරම් නැත</li>
-                        <li><input type="radio" name="q30" value="Strongly disagree" role="radio" required="" aria-required="true">කිසිසේත් නැත</li>
-                    </ul>
-                </li>
-            </ul>
-        </li>        
-    </ol>
-    <button id="ButtonSubmit" onclick="postScenario1ToGoogle()" type="button" >>></button>
+    <section>
+        <div class="container">
+            <div class="row">
+              	<h3>පහත සඳහන් සිදුවීම් කියවා, ඔබගේ අදහසට අනුව සෑම සිදුවීම් විස්තරයක් පහළින් දිස්වන ප‍්‍රශ්නවලට අදාල පිළිතුර මත click කරන්න.    </h3>
+                <ol class="list-group">&nbsp
+                    <li class="list-group-item">කමලාගේ සැමියා වෙහෙසකාරි දිනකට පසු හවස්වි නිවසට පැමිණියේය. අවාසනාවට ඇය අතින් රාත‍්‍රී වේල උයන අතරතුර පිලිස්සුනි. මෙයින් කෝපයට පත්වු සැමියා ඇයට පහරදිය.
+                        <ul>
+                            <li>ඔබ ඔහුගේ ප‍්‍රතිචාරයට එකඟවන්නේද?
+                                <ul class="list-unstyled" >
+                                  	<li><input type="radio" name="q01" value="Yes" role="radio" required="" aria-required="true"><span class="space-sides">එකඟවෙමි</li>
+                                    <li><input type="radio" name="q01" value="Neither agree nor disagree" role="radio" required="" aria-required="true"><span class="space-sides">එකඟවන්නේත් නැත එකඟ නොවන්නේත් නැත</li>
+                                    <li><input type="radio" name="q01" value="No" role="radio" required="" aria-required="true"><span class="space-sides">කිසිසේත් එකඟ නොවෙමි</li>
+                                </ul>
+                            </li>
+                            <li>ඔබ මෙම විස්තරය කියවා කෝපයට පත්වූවාද?
+                                <ul class="list-unstyled">
+                                    <li><input type="radio" name="q02" value="Very much" role="radio" required="" aria-required="true"><span class="space-sides">බොහෝ දුරට</li>
+                                    <li><input type="radio" name="q02" value="Somewhat" role="radio" required="" aria-required="true"><span class="space-sides">තරමක් දුරට</li>
+                                    <li><input type="radio" name="q02" value="Netural" role="radio" required="" aria-required="true"><span class="space-sides">විශේෂයක් නැත</li>
+                                    <li><input type="radio" name="q02" value="Not so much" role="radio" required="" aria-required="true"><span class="space-sides">එතරම් නැත</li>
+                                    <li><input type="radio" name="q02" value="Not at all" role="radio" required="" aria-required="true"><span class="space-sides">කිසිසේත් නැත</li>
+                                </ul>
+                            </li>
+                            <li>මෙය ඔබ ඉදිරියේ සිදුවුවා නම් එයට මැදිහත් වනවාද?
+                                <ul class="list-unstyled">
+                                    <li><input type="radio" name="q03" value="Strongly agree" role="radio" required="" aria-required="true"><span class="space-sides">බොහෝ දුරට</li>
+                                    <li><input type="radio" name="q03" value="Agree" role="radio" required="" aria-required="true"><span class="space-sides">තරමක් දුරට</li>
+                                    <li><input type="radio" name="q03" value="Neither agree nor disagree" role="radio" required="" aria-required="true"><span class="space-sides">විශේෂයක් නැත</li>
+                                    <li><input type="radio" name="q03" value="Disagree" role="radio" required="" aria-required="true"><span class="space-sides">එතරම් නැත</li>
+                                    <li><input type="radio" name="q03" value="Strongly disagree" role="radio" required="" aria-required="true"><span class="space-sides">කිසිසේත් නැත</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>&nbsp
+                    <li class="list-group-item">යුවතියක් තරමක් තද වූ ඇඳුමින් සැරසී අඩි සපත්තු පලඳා ගොඩනගන ඉඩමක් පසුකර ගියාය. ඇය දුටු විගස එහි කුලීකරුවන් ඇයට අපහාසාත්මක ලෙස කෑගසන ලදි.
+                        <ul>
+                            <li>ඔබ ඔහුගේ ප‍්‍රතිචාරයට එකඟවන්නේද?
+                                <ul class="list-unstyled">
+                                    <li><input type="radio" name="q04" value="Yes" role="radio" required="" aria-required="true"><span class="space-sides">එකඟවෙමි</li>
+                                    <li><input type="radio" name="q04" value="Neither agree nor disagree" role="radio" required="" aria-required="true"><span class="space-sides">එකඟවන්නේත් නැත එකඟ නොවන්නේත් නැත</li>
+                                    <li><input type="radio" name="q04" value="No" role="radio" required="" aria-required="true"><span class="space-sides">කිසිසේත් එකඟ නොවෙමි</li>
+                                </ul>
+                            </li>
+                            <li>ඔබ මෙම විස්තරය කියවා කෝපයට පත්වූවාද?
+                                <ul class="list-unstyled">
+                                    <li><input type="radio" name="q05" value="Very much" role="radio" required="" aria-required="true"><span class="space-sides">බොහෝ දුරට</li>
+                                    <li><input type="radio" name="q05" value="Somewhat" role="radio" required="" aria-required="true"><span class="space-sides">තරමක් දුරට</li>
+                                    <li><input type="radio" name="q05" value="Netural" role="radio" required="" aria-required="true"><span class="space-sides">විශේෂයක් නැත</li>
+                                    <li><input type="radio" name="q05" value="Not so much" role="radio" required="" aria-required="true"><span class="space-sides">එතරම් නැත</li>
+                                    <li><input type="radio" name="q05" value="Not at all" role="radio" required="" aria-required="true"><span class="space-sides">කිසිසේත් නැත</li>
+                                </ul>
+                            </li>
+                            <li>මෙය ඔබ ඉදිරියේ සිදුවුවා නම් එයට මැදිහත් වනවාද?
+                                <ul class="list-unstyled">
+                                    <li><input type="radio" name="q06" value="Strongly agree" role="radio" required="" aria-required="true"><span class="space-sides">බොහෝ දුරට</li>
+                                    <li><input type="radio" name="q06" value="Agree" role="radio" required="" aria-required="true"><span class="space-sides">තරමක් දුරට</li>
+                                    <li><input type="radio" name="q06" value="Neither agree nor disagree" role="radio" required="" aria-required="true"><span class="space-sides">විශේෂයක් නැත</li>
+                                    <li><input type="radio" name="q06" value="Disagree" role="radio" required="" aria-required="true"><span class="space-sides">එතරම් නැත</li>
+                                    <li><input type="radio" name="q06" value="Strongly disagree" role="radio" required="" aria-required="true"><span class="space-sides">කිසිසේත් නැත</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>&nbsp
+                    <li class="list-group-item">නිත්‍යා තම යෙහෙලියන් සමඟ එදින නාට්‍ය නැරඹීමට සූදානම් විය නමුත් ඇයගේ පෙම්වතා ඇයට හොස්ටල් කාමරයෙන් පිට යාමට තහනම් කලේය. එය මන්ද යත් ඔහු නොමැති නිසා ඇයට තනියම යාමට අකමැති වූ හෙයින්.
+                        <ul>
+                            <li>ඔබ ඔහුගේ ප‍්‍රතිචාරයට එකඟවන්නේද?
+                                <ul class="list-unstyled">
+                                    <li><input type="radio" name="q07" value="Yes" role="radio" required="" aria-required="true"><span class="space-sides">එකඟවෙමි</li>
+                                    <li><input type="radio" name="q07" value="Neither agree nor disagree" role="radio" required="" aria-required="true"><span class="space-sides">එකඟවන්නේත් නැත එකඟ නොවන්නේත් නැත</li>
+                                    <li><input type="radio" name="q07" value="No" role="radio" required="" aria-required="true"><span class="space-sides">කිසිසේත් එකඟ නොවෙමි</li>
+                                </ul>
+                            </li>
+                            <li>ඔබ මෙම විස්තරය කියවා කෝපයට පත්වූවාද?
+                                <ul class="list-unstyled">
+                                    <li><input type="radio" name="q08" value="Very much" role="radio" required="" aria-required="true"><span class="space-sides">බොහෝ දුරට</li>
+                                    <li><input type="radio" name="q08" value="Somewhat" role="radio" required="" aria-required="true"><span class="space-sides">තරමක් දුරට</li>
+                                    <li><input type="radio" name="q08" value="Netural" role="radio" required="" aria-required="true"><span class="space-sides">විශේෂයක් නැත</li>
+                                    <li><input type="radio" name="q08" value="Not so much" role="radio" required="" aria-required="true"><span class="space-sides">එතරම් නැත</li>
+                                    <li><input type="radio" name="q08" value="Not at all" role="radio" required="" aria-required="true"><span class="space-sides">කිසිසේත් නැත</li>
+                                </ul>
+                            </li>
+                            <li>මෙය ඔබ ඉදිරියේ සිදුවුවා නම් එයට මැදිහත් වනවාද?
+                                <ul class="list-unstyled">
+                                    <li><input type="radio" name="q09" value="Strongly agree" role="radio" required="" aria-required="true"><span class="space-sides">බොහෝ දුරට</li>
+                                    <li><input type="radio" name="q09" value="Agree" role="radio" required="" aria-required="true"><span class="space-sides">තරමක් දුරට</li>
+                                    <li><input type="radio" name="q09" value="Neither agree nor disagree" role="radio" required="" aria-required="true"><span class="space-sides">විශේෂයක් නැත</li>
+                                    <li><input type="radio" name="q09" value="Disagree" role="radio" required="" aria-required="true"><span class="space-sides">එතරම් නැත</li>
+                                    <li><input type="radio" name="q09" value="Strongly disagree" role="radio" required="" aria-required="true"><span class="space-sides">කිසිසේත් නැත</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>&nbsp
+                    <li class="list-group-item">ගාමන්ට් ෆැක්ටරියේ රාත‍්‍රී බාගය වැඩකල කාන්තාවක් තනියම බස් නැවතුම්පල සිට තම නිවසට යාමට සිදුවිය. එසේ යනවිට ඇයට කළුවර වූ පටුමගක සිටි බේබද්දෙකු විසින් නවතා ¥ෂණය කලේය. 
+                        <ul>
+                            <li>ඔබ ඔහුගේ ප‍්‍රතිචාරයට එකඟවන්නේද?
+                                <ul class="list-unstyled">
+                                    <li><input type="radio" name="q10" value="Yes" role="radio" required="" aria-required="true"><span class="space-sides">එකඟවෙමි</li>
+                                    <li><input type="radio" name="q10" value="Neither agree nor disagree" role="radio" required="" aria-required="true"><span class="space-sides">එකඟවන්නේත් නැත එකඟ නොවන්නේත් නැත</li>
+                                    <li><input type="radio" name="q10" value="No" role="radio" required="" aria-required="true"><span class="space-sides">කිසිසේත් එකඟ නොවෙමි</li>
+                                </ul>
+                            </li>
+                            <li>ඔබ මෙම විස්තරය කියවා කෝපයට පත්වූවාද?
+                                <ul class="list-unstyled">
+                                    <li><input type="radio" name="q11" value="Very much" role="radio" required="" aria-required="true"><span class="space-sides">බොහෝ දුරට</li>
+                                    <li><input type="radio" name="q11" value="Somewhat" role="radio" required="" aria-required="true"><span class="space-sides">තරමක් දුරට</li>
+                                    <li><input type="radio" name="q11" value="Netural" role="radio" required="" aria-required="true"><span class="space-sides">විශේෂයක් නැත</li>
+                                    <li><input type="radio" name="q11" value="Not so much" role="radio" required="" aria-required="true"><span class="space-sides">එතරම් නැත</li>
+                                    <li><input type="radio" name="q11" value="Not at all" role="radio" required="" aria-required="true"><span class="space-sides">කිසිසේත් නැත</li>
+                                </ul>
+                            </li>
+                            <li>මෙය ඔබ ඉදිරියේ සිදුවුවා නම් එයට මැදිහත් වනවාද?
+                                <ul class="list-unstyled">
+                                    <li><input type="radio" name="q12" value="Strongly agree" role="radio" required="" aria-required="true"><span class="space-sides">බොහෝ දුරට</li>
+                                    <li><input type="radio" name="q12" value="Agree" role="radio" required="" aria-required="true"><span class="space-sides">තරමක් දුරට</li>
+                                    <li><input type="radio" name="q12" value="Neither agree nor disagree" role="radio" required="" aria-required="true"><span class="space-sides">විශේෂයක් නැත</li>
+                                    <li><input type="radio" name="q12" value="Disagree" role="radio" required="" aria-required="true"><span class="space-sides">එතරම් නැත</li>
+                                    <li><input type="radio" name="q12" value="Strongly disagree" role="radio" required="" aria-required="true"><span class="space-sides">කිසිසේත් නැත</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>&nbsp
+                    <li class="list-group-item">නීනා සහ ඇගේ සැමියා රාජ්‍ය සේවයේ නිරත වේ. ඇයගේ සම්පූර්ණ පඩිය සැමියාට ලබාදිය යුත්තේ ඔහු ”මුදල් කළමනාකරණයට වඩාත් සුදුසු නිසාය” ඇය මෙම මාසයේ පඩිය ඔහුට නොදුන් බැවින් ඇයට කුණුහරපින් බැනවැදුනේය.
+                        <ul>
+                            <li>ඔබ ඔහුගේ ප‍්‍රතිචාරයට එකඟවන්නේද?
+                                <ul class="list-unstyled">
+                                    <li><input type="radio" name="q13" value="Yes" role="radio" required="" aria-required="true"><span class="space-sides">එකඟවෙමි</li>
+                                    <li><input type="radio" name="q13" value="Neither agree nor disagree" role="radio" required="" aria-required="true"><span class="space-sides">එකඟවන්නේත් නැත එකඟ නොවන්නේත් නැත</li>
+                                    <li><input type="radio" name="q13" value="No" role="radio" required="" aria-required="true"><span class="space-sides">කිසිසේත් එකඟ නොවෙමි</li>
+                                </ul>
+                            </li>
+                            <li>ඔබ මෙම විස්තරය කියවා කෝපයට පත්වූවාද?
+                                <ul class="list-unstyled">
+                                    <li><input type="radio" name="q14" value="Very much" role="radio" required="" aria-required="true"><span class="space-sides">බොහෝ දුරට</li>
+                                    <li><input type="radio" name="q14" value="Somewhat" role="radio" required="" aria-required="true"><span class="space-sides">තරමක් දුරට</li>
+                                    <li><input type="radio" name="q14" value="Netural" role="radio" required="" aria-required="true"><span class="space-sides">විශේෂයක් නැත</li>
+                                    <li><input type="radio" name="q14" value="Not so much" role="radio" required="" aria-required="true"><span class="space-sides">එතරම් නැත</li>
+                                    <li><input type="radio" name="q14" value="Not at all" role="radio" required="" aria-required="true"><span class="space-sides">කිසිසේත් නැත</li>
+                                </ul>
+                            </li>
+                            <li>මෙය ඔබ ඉදිරියේ සිදුවුවා නම් එයට මැදිහත් වනවාද?
+                                <ul class="list-unstyled">
+                                    <li><input type="radio" name="q15" value="Strongly agree" role="radio" required="" aria-required="true"><span class="space-sides">බොහෝ දුරට</li>
+                                    <li><input type="radio" name="q15" value="Agree" role="radio" required="" aria-required="true"><span class="space-sides">තරමක් දුරට</li>
+                                    <li><input type="radio" name="q15" value="Neither agree nor disagree" role="radio" required="" aria-required="true"><span class="space-sides">විශේෂයක් නැත</li>
+                                    <li><input type="radio" name="q15" value="Disagree" role="radio" required="" aria-required="true"><span class="space-sides">එතරම් නැත</li>
+                                    <li><input type="radio" name="q15" value="Strongly disagree" role="radio" required="" aria-required="true"><span class="space-sides">කිසිසේත් නැත</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>&nbsp
+                    <li class="list-group-item">ෂෙනාලී පසුගිය අවුරුදු 10 තිස්සේ වැඩකරන රැකියා ස්ථානයේ උසස්වීම ලැබීමට නියමිත විය. නමුත් එම උසස්වීම මෑතකදී රස්සාවට ආ සුරේෂ්ට පිරිනැමුනි. එසේ කිරීමට හේතුව විමසූ විට එය ”පිරිමීන් වඩාත් හොඳ කළමනාකරු වන බැවින්”යැයි අධ්‍යක්ෂන මණ්ඩලය පවසා සිටියෝය. 
+                        <ul>
+                            <li>ඔබ ඔහුගේ ප‍්‍රතිචාරයට එකඟවන්නේද?
+                                <ul class="list-unstyled">
+                                    <li><input type="radio" name="q16" value="Yes" role="radio" required="" aria-required="true"><span class="space-sides">එකඟවෙමි</li>
+                                    <li><input type="radio" name="q16" value="Neither agree nor disagree" role="radio" required="" aria-required="true"><span class="space-sides">එකඟවන්නේත් නැත එකඟ නොවන්නේත් නැත</li>
+                                    <li><input type="radio" name="q16" value="No" role="radio" required="" aria-required="true"><span class="space-sides">කිසිසේත් එකඟ නොවෙමි</li>
+                                </ul>
+                            </li>
+                            <li>ඔබ මෙම විස්තරය කියවා කෝපයට පත්වූවාද?
+                                <ul class="list-unstyled">
+                                    <li><input type="radio" name="q17" value="Very much" role="radio" required="" aria-required="true"><span class="space-sides">බොහෝ දුරට</li>
+                                    <li><input type="radio" name="q17" value="Somewhat" role="radio" required="" aria-required="true"><span class="space-sides">තරමක් දුරට</li>
+                                    <li><input type="radio" name="q17" value="Netural" role="radio" required="" aria-required="true"><span class="space-sides">විශේෂයක් නැත</li>
+                                    <li><input type="radio" name="q17" value="Not so much" role="radio" required="" aria-required="true"><span class="space-sides">එතරම් නැත</li>
+                                    <li><input type="radio" name="q17" value="Not at all" role="radio" required="" aria-required="true"><span class="space-sides">කිසිසේත් නැත</li>
+                                </ul>
+                            </li>
+                            <li>මෙය ඔබ ඉදිරියේ සිදුවුවා නම් එයට මැදිහත් වනවාද?
+                                <ul class="list-unstyled">
+                                    <li><input type="radio" name="q18" value="Strongly agree" role="radio" required="" aria-required="true"><span class="space-sides">බොහෝ දුරට</li>
+                                    <li><input type="radio" name="q18" value="Agree" role="radio" required="" aria-required="true"><span class="space-sides">තරමක් දුරට</li>
+                                    <li><input type="radio" name="q18" value="Neither agree nor disagree" role="radio" required="" aria-required="true"><span class="space-sides">විශේෂයක් නැත</li>
+                                    <li><input type="radio" name="q18" value="Disagree" role="radio" required="" aria-required="true"><span class="space-sides">එතරම් නැත</li>
+                                    <li><input type="radio" name="q18" value="Strongly disagree" role="radio" required="" aria-required="true"><span class="space-sides">කිසිසේත් නැත</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>&nbsp
+                    <li class="list-group-item">තම ප‍්‍රචන්ඩකාරී සැමියාට එරෙහිව පැමිණිල්ලක් දැමිමට කාන්තාවක් තම සොයුරිය සමඟ යාමට කතාකරගත්තාය. සොයුරිය මඟින් එය දැනගත් සැමියා එසේ නැවත කිරීමට සිතුවොත් ඇය හා තමන් කුස්සි පිහියෙන් මරාගන්නා බව පැවසුවේය.
+                        <ul>
+                            <li>ඔබ ඔහුගේ ප‍්‍රතිචාරයට එකඟවන්නේද?
+                                <ul class="list-unstyled">
+                                    <li><input type="radio" name="q19" value="Yes" role="radio" required="" aria-required="true"><span class="space-sides">එකඟවෙමි</li>
+                                    <li><input type="radio" name="q19" value="Neither agree nor disagree" role="radio" required="" aria-required="true"><span class="space-sides">එකඟවන්නේත් නැත එකඟ නොවන්නේත් නැත</li>
+                                    <li><input type="radio" name="q19" value="No" role="radio" required="" aria-required="true"><span class="space-sides">කිසිසේත් එකඟ නොවෙමි</li>
+                                </ul>
+                            </li>
+                            <li>ඔබ මෙම විස්තරය කියවා කෝපයට පත්වූවාද?
+                                <ul class="list-unstyled">
+                                    <li><input type="radio" name="q20" value="Very much" role="radio" required="" aria-required="true"><span class="space-sides">බොහෝ දුරට</li>
+                                    <li><input type="radio" name="q20" value="Somewhat" role="radio" required="" aria-required="true"><span class="space-sides">තරමක් දුරට</li>
+                                    <li><input type="radio" name="q20" value="Netural" role="radio" required="" aria-required="true"><span class="space-sides">විශේෂයක් නැත</li>
+                                    <li><input type="radio" name="q20" value="Not so much" role="radio" required="" aria-required="true"><span class="space-sides">එතරම් නැත</li>
+                                    <li><input type="radio" name="q20" value="Not at all" role="radio" required="" aria-required="true"><span class="space-sides">කිසිසේත් නැත</li>
+                                </ul>
+                            </li>
+                            <li>මෙය ඔබ ඉදිරියේ සිදුවුවා නම් එයට මැදිහත් වනවාද?
+                                <ul class="list-unstyled">
+                                    <li><input type="radio" name="q21" value="Strongly agree" role="radio" required="" aria-required="true"><span class="space-sides">බොහෝ දුරට</li>
+                                    <li><input type="radio" name="q21" value="Agree" role="radio" required="" aria-required="true"><span class="space-sides">තරමක් දුරට</li>
+                                    <li><input type="radio" name="q21" value="Neither agree nor disagree" role="radio" required="" aria-required="true"><span class="space-sides">විශේෂයක් නැත</li>
+                                    <li><input type="radio" name="q21" value="Disagree" role="radio" required="" aria-required="true"><span class="space-sides">එතරම් නැත</li>
+                                    <li><input type="radio" name="q21" value="Strongly disagree" role="radio" required="" aria-required="true"><span class="space-sides">කිසිසේත් නැත</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>&nbsp
+                    <li class="list-group-item">රුචිකාගේ පෙම්වතා ඇයගේ මිතුරියන්ට අකමැතිය. ඔවුන්ගේ ආශ‍්‍රය නතර කර තමා එක්ක වැඩිපුර කල්ගෙවීමට පැවසූයේ ඔහු ඇයට ගොඩක් ආදරය කරන බැවින් හා ඔහු වෙත ඇයගේ සියලූම අවධානය යොමුවිය යුතු නිසාය.
+                        <ul>
+                            <li>ඔබ ඔහුගේ ප‍්‍රතිචාරයට එකඟවන්නේද?
+                                <ul class="list-unstyled">
+                                    <li><input type="radio" name="q22" value="Yes" role="radio" required="" aria-required="true"><span class="space-sides">එකඟවෙමි</li>
+                                    <li><input type="radio" name="q22" value="Neither agree nor disagree" role="radio" required="" aria-required="true"><span class="space-sides">එකඟවන්නේත් නැත එකඟ නොවන්නේත් නැත</li>
+                                    <li><input type="radio" name="q22" value="No" role="radio" required="" aria-required="true"><span class="space-sides">කිසිසේත් එකඟ නොවෙමි</li>
+                                </ul>
+                            </li>
+                            <li>ඔබ මෙම විස්තරය කියවා කෝපයට පත්වූවාද?
+                                <ul class="list-unstyled">
+                                    <li><input type="radio" name="q23" value="Very much" role="radio" required="" aria-required="true"><span class="space-sides">බොහෝ දුරට</li>
+                                    <li><input type="radio" name="q23" value="Somewhat" role="radio" required="" aria-required="true"><span class="space-sides">තරමක් දුරට</li>
+                                    <li><input type="radio" name="q23" value="Netural" role="radio" required="" aria-required="true"><span class="space-sides">විශේෂයක් නැත</li>
+                                    <li><input type="radio" name="q23" value="Not so much" role="radio" required="" aria-required="true"><span class="space-sides">එතරම් නැත</li>
+                                    <li><input type="radio" name="q23" value="Not at all" role="radio" required="" aria-required="true"><span class="space-sides">කිසිසේත් නැත</li>
+                                </ul>
+                            </li>
+                            <li>මෙය ඔබ ඉදිරියේ සිදුවුවා නම් එයට මැදිහත් වනවාද?
+                                <ul class="list-unstyled">
+                                    <li><input type="radio" name="q24" value="Strongly agree" role="radio" required="" aria-required="true"><span class="space-sides">බොහෝ දුරට</li>
+                                    <li><input type="radio" name="q24" value="Agree" role="radio" required="" aria-required="true"><span class="space-sides">තරමක් දුරට</li>
+                                    <li><input type="radio" name="q24" value="Neither agree nor disagree" role="radio" required="" aria-required="true"><span class="space-sides">විශේෂයක් නැත</li>
+                                    <li><input type="radio" name="q24" value="Disagree" role="radio" required="" aria-required="true"><span class="space-sides">එතරම් නැත</li>
+                                    <li><input type="radio" name="q24" value="Strongly disagree" role="radio" required="" aria-required="true"><span class="space-sides">කිසිසේත් නැත</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>&nbsp
+                    <li class="list-group-item">ශාන්තී තම සැමියා සමඟ, ඇතැම් දවස්වල අකමැති වූවද, ලිංගික කටයුතු වල යෙදීම අනිවාර්්‍ය වි ඇත. ඔහුට අනුව ඇයට විරුද්ධවීමට නොහැක්කේ ඔවුන් විවාහක නිසත් ඔහුගේ ලිංගික ආශාවන් ඇය තුලින් ඉෂ්ට විය යුතු නිසාත්ය.
+                        <ul>
+                            <li>ඔබ ඔහුගේ ප‍්‍රතිචාරයට එකඟවන්නේද?
+                                <ul class="list-unstyled">
+                                    <li><input type="radio" name="q25" value="Yes" role="radio" required="" aria-required="true"><span class="space-sides">එකඟවෙමි</li>
+                                    <li><input type="radio" name="q25" value="Neither agree nor disagree" role="radio" required="" aria-required="true">එකඟවන්නේත් නැත එකඟ නොවන්නේත් නැත</li>
+                                    <li><input type="radio" name="q25" value="No" role="radio" required="" aria-required="true"><span class="space-sides">කිසිසේත් එකඟ නොවෙමි</li>
+                                </ul>
+                            </li>
+                            <li>ඔබ මෙම විස්තරය කියවා කෝපයට පත්වූවාද?
+                                <ul class="list-unstyled">
+                                    <li><input type="radio" name="q26" value="Very much" role="radio" required="" aria-required="true"><span class="space-sides">බොහෝ දුරට</li>
+                                    <li><input type="radio" name="q26" value="Somewhat" role="radio" required="" aria-required="true"><span class="space-sides">තරමක් දුරට</li>
+                                    <li><input type="radio" name="q26" value="Netural" role="radio" required="" aria-required="true"><span class="space-sides">විශේෂයක් නැත</li>
+                                    <li><input type="radio" name="q26" value="Not so much" role="radio" required="" aria-required="true"><span class="space-sides">එතරම් නැත</li>
+                                    <li><input type="radio" name="q26" value="Not at all" role="radio" required="" aria-required="true"><span class="space-sides">කිසිසේත් නැත</li>
+                                </ul>
+                            </li>
+                            <li>මෙය ඔබ ඉදිරියේ සිදුවුවා නම් එයට මැදිහත් වනවාද?
+                                <ul class="list-unstyled">
+                                    <li><input type="radio" name="q27" value="Strongly agree" role="radio" required="" aria-required="true"><span class="space-sides">බොහෝ දුරට</li>
+                                    <li><input type="radio" name="q27" value="Agree" role="radio" required="" aria-required="true"><span class="space-sides">තරමක් දුරට</li>
+                                    <li><input type="radio" name="q27" value="Neither agree nor disagree" role="radio" required="" aria-required="true"><span class="space-sides">විශේෂයක් නැත</li>
+                                    <li><input type="radio" name="q27" value="Disagree" role="radio" required="" aria-required="true"><span class="space-sides">එතරම් නැත</li>
+                                    <li><input type="radio" name="q27" value="Strongly disagree" role="radio" required="" aria-required="true"><span class="space-sides">කිසිසේත් නැත</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>&nbsp
+                    <li class="list-group-item">උසස් පෙල ලිවීමෙන් පසු ලක්ෂ්මීට රියදුරු බලපත‍්‍රයක් ගැනීමට උවමනා විය. එය පිළිබඳව තම මව සමඟ පවසන අතරතුර එය ඇසුණු තම සොයුරා එය නොකිරිමට අවවාද කලේ ”ගෑණුන්ට එලවගන්නත් බෑ, පිරිමි අපට නිවීහැනහිල්ලේ පාරේ යන්නත් නෑ” යැයි පවසමින්.
+                        <ul>
+                            <li>ඔබ ඔහුගේ ප‍්‍රතිචාරයට එකඟවන්නේද?
+                                <ul class="list-unstyled">
+                                    <li><input type="radio" name="q28" value="Yes" role="radio" required="" aria-required="true"><span class="space-sides">එකඟවෙමි</li>
+                                    <li><input type="radio" name="q28" value="Neither agree nor disagree" role="radio" required="" aria-required="true">එකඟවන්නේත් නැත එකඟ නොවන්නේත් නැත</li>
+                                    <li><input type="radio" name="q28" value="No" role="radio" required="" aria-required="true"><span class="space-sides">කිසිසේත් එකඟ නොවෙමි</li>
+                                </ul>
+                            </li>
+                            <li>ඔබ මෙම විස්තරය කියවා කෝපයට පත්වූවාද?
+                                <ul class="list-unstyled">
+                                    <li><input type="radio" name="q29" value="Very much" role="radio" required="" aria-required="true"><span class="space-sides">බොහෝ දුරට</li>
+                                    <li><input type="radio" name="q29" value="Somewhat" role="radio" required="" aria-required="true"><span class="space-sides">තරමක් දුරට</li>
+                                    <li><input type="radio" name="q29" value="Netural" role="radio" required="" aria-required="true"><span class="space-sides">විශේෂයක් නැත</li>
+                                    <li><input type="radio" name="q29" value="Not so much" role="radio" required="" aria-required="true"><span class="space-sides">එතරම් නැත</li>
+                                    <li><input type="radio" name="q29" value="Not at all" role="radio" required="" aria-required="true"><span class="space-sides">කිසිසේත් නැත</li>
+                                </ul>
+                            </li>
+                            <li>මෙය ඔබ ඉදිරියේ සිදුවුවා නම් එයට මැදිහත් වනවාද?
+                                <ul class="list-unstyled">
+                                    <li><input type="radio" name="q30" value="Strongly agree" role="radio" required="" aria-required="true"><span class="space-sides">බොහෝ දුරට</li>
+                                    <li><input type="radio" name="q30" value="Agree" role="radio" required="" aria-required="true"><span class="space-sides">තරමක් දුරට</li>
+                                    <li><input type="radio" name="q30" value="Neither agree nor disagree" role="radio" required="" aria-required="true"><span class="space-sides">විශේෂයක් නැත</li>
+                                    <li><input type="radio" name="q30" value="Disagree" role="radio" required="" aria-required="true"><span class="space-sides">එතරම් නැත</li>
+                                    <li><input type="radio" name="q30" value="Strongly disagree" role="radio" required="" aria-required="true"><span class="space-sides">කිසිසේත් නැත</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>        
+                </ol>
+                <button class="btn btn-default" id="ButtonSubmit" onclick="postScenario1ToGoogle()" type="button" >ඉදිරියට</button>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
