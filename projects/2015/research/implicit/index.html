@@ -1,25 +1,84 @@
-<!DOCTYPE HTML>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
-	<title>Elvins - Research 2015</title>
-	<meta name="description" content="test">
-	<meta name="author" content="elvinlabs">
-
-    <script type="text/javascript" src="../js/main.js"></script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <!--[if lt IE 9]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
+    <title>Implicit Test</title>
+    
+    <link rel="stylesheet" href="implicit.css">
 </head>
-
 <body>
-  	<p>Happiness, love, fun, joy, peaceful, safe, calm, unity, wonderful, pleasure (GOOD)</p>
-    <p>සතුට, ආදරය, විනෝදය, ප‍්‍රීතිය, සාමකාමි, ආරක්ෂාව, සන්සුන් බව, සමඟිය, අසිරිමත්, සැප</p>
-    <p>Agony, Terrible, Horrible, Humiliate, Nasty, Painful, Awful, Tragic, stressful, hate (BAD)</p>
-    <p>සන්තාපය, දරුණු, භයානක, නින්දිත, නපුරු, වේදනාකාරී, භයංකර, ඛේදජනක, පීඩාකාරි, ක්‍රෝධය</p>
-    <a href="javascript:startTranslation()">Next page</a>
+    
+    <div class="imp-notify">
+        <p>Press [e] for left & [i] for right</p>
+        <p id="imp-out">Press start when ready!</p>
+    </div>
+    
+    <div class="imp-container">
+        
+        
+        <div class="imp-test imp-word-test" id="imp-0">
+            <div class="imp-categories">
+<!--                <div class="imp-category-left">good</div>-->
+<!--                <div class="imp-category-right">bad</div>-->
+            </div>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+<!--                <div class="imp-word">word</div>-->
+            </div>
+        </div>
+        
+        
+        
+        <div class="imp-test imp-word-test imp-hidden" id="imp-1">
+            <div class="imp-categories">
+                <div class="imp-category-left">good</div>
+                <div class="imp-category-right">bad</div>
+            </div>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">word</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-word-test imp-hidden" id="imp-2">
+            <div class="imp-categories">
+                <div class="imp-category-left">good</div>
+                <div class="imp-category-right">bad</div>
+            </div>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">word</div>
+<!--                <div class="imp-pic"><img src='pics/hotel.jpg'></div>-->
+            </div>
+        </div>
+        
+        <div class="imp-test imp-word-test imp-hidden" id="imp-3">
+            <div class="imp-categories">
+                <div class="imp-category-left">good</div>
+                <div class="imp-category-right">bad</div>
+            </div>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">word</div>
+<!--                <div class="imp-pic"><img src='pics/hotel.jpg'></div>-->
+            </div>
+        </div>
+        
+        <div class="imp-test imp-word-test imp-hidden" id="imp-4">
+            <div class="imp-categories">
+                <div class="imp-category-left">good</div>
+                <div class="imp-category-right">bad</div>
+            </div>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">word</div>
+<!--                <div class="imp-pic"><img src='pics/hotel.jpg'></div>-->
+            </div>
+        </div>
+        
+        
+        
+    </div>
+    
+    <script src="imp.js"></script>
 </body>
 </html>

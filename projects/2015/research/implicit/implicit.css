@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: georgia, palatino linotype, helvetica neue, arial, droid sans;
+}
+
+.imp-pic img {
+    width: 400px;
+}
+
+.imp-word-test .imp-word {}
+.imp-word {
+    font-size: 48px;
+    display: inline-block;
+    vertical-align: middle;
+}
+/*.imp-word-test .imp-pic {display: none;}*/
+.imp-category-left {
+    display: inline-block;
+    float: left;
+    vertical-align: middle;
+}
+
+.imp-category-right {
+    display: inline-block;
+    float: right;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+.imp-container {
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.imp-categories {
+    height: 40px;
+    font-size: 40px;
+    position: absolute;
+    width: 100%;
+}
+
+.imp-test {
+    display: inline-block;
+    position: relative;
+    width: 600px;
+    border: 4px dotted #333;
+    border-radius: 10px;
+    padding: 10px;
+    height: 500px;
+}
+
+.imp-notify {
+    text-align: center;
+}
+
+.imp-pic {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.imp-pic-helper {
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.imp-test-instance {
+    position: relative;
+    height: 100%;
+}
+
+.imp-hidden {
+    display: none;
+}
