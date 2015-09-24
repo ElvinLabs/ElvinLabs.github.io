@@ -5,7 +5,7 @@ body {
 }
 
 .imp-pic img {
-    width: 400px;
+    width: 450px;
 }
 
 .imp-word-test .imp-word {}
@@ -20,12 +20,26 @@ body {
     float: left;
     vertical-align: middle;
 }
+button.imp-category-left {
+    background-image: none;
+    background-color: transparent;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+}
 
 .imp-category-right {
     display: inline-block;
     float: right;
     vertical-align: middle;
     margin-right: 20px;
+}
+button.imp-category-right {
+    background-image: none;
+    background-color: transparent;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
 }
 
 .imp-container {
@@ -73,4 +87,9 @@ body {
 
 .imp-hidden {
     display: none;
+}
+
+.imp-text {
+    font-size: 28px;
+    font-style: italic;
 }

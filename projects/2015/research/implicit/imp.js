@@ -4,7 +4,7 @@ var end=start
 
 var testType='intro'
 var test=0
-var MAXtests=4 // change!!!
+var MAXtests=43 // change!!!
 
 var times=[]
 var answers=[]
@@ -35,6 +35,7 @@ document.onkeypress = function(e) {
             hideEl('imp-'+test)
             if (test<MAXtests) {
                 showEl('imp-'+(++test))
+//                window.location.hash = '#'+test
                 start=performance.now()
             } else {
                 alert('thanks!')
@@ -52,6 +53,7 @@ document.onkeypress = function(e) {
             hideEl('imp-'+test)
             if (test<MAXtests) {
                 showEl('imp-'+(++test))
+//                window.location.hash = '#'+test
                 start=performance.now()
             } else {
                 alert('thanks!')
