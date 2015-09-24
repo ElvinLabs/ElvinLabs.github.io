@@ -24,13 +24,13 @@ function pressE(){
     answers.push(0)
 
     // load div
-    hideEl('imp-'+test)
+    if (test!==MAXtests) hideEl('imp-'+test)
     if (test<MAXtests) {
         showEl('imp-'+(++test))
 //                window.location.hash = '#'+test
         start=performance.now()
     } else {
-        alert('thanks!')
+//        alert('thanks!')
     }
 }
 
@@ -41,13 +41,13 @@ function pressI(){
     answers.push(1)
 
     // load div
-    hideEl('imp-'+test)
+    if (test!==MAXtests) hideEl('imp-'+test)
     if (test<MAXtests) {
         showEl('imp-'+(++test))
     //                window.location.hash = '#'+test
         start=performance.now()
     } else {
-        alert('thanks!')
+//        alert('thanks!')
     }
 }
 
