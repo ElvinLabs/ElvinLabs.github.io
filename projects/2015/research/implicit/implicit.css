@@ -53,6 +53,7 @@ button.imp-category-right {
     font-size: 40px;
     position: absolute;
     width: 100%;
+    z-index: 1000;
 }
 
 .imp-test {
@@ -92,4 +93,8 @@ button.imp-category-right {
 .imp-text {
     font-size: 28px;
     font-style: italic;
+}
+
+.btn-default {
+    font-size: inherit;
 }
