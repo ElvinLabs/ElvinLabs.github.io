@@ -5,7 +5,7 @@ var end=start
 var testType='intro'
 var test=0
 var set=1
-var MAXtests=80 + 1 // change!!!
+var MAXtests=140 + 1 // change!!!
 
 var times=[]
 var answers=[]
@@ -21,12 +21,16 @@ function showEl(_id) {
 function loadDiv() {
     if (test!==MAXtests) hideEl('imp-'+test)
     if (test<MAXtests) {
-        if ( !(set==1&&test==20) && !(set==2&&test==40) ) {
+        if ( !(set==1&&test==20) && !(set==2&&test==40) && !(set==3&&test==80)  && !(set==4&&test==100) ) {
             showEl('imp-'+(++test))
             if (test==21) {
                 hideEl('imp-set-2')
             } else if (test==41) {
                 hideEl('imp-set-3')
+            } else if (test==81) {
+                hideEl('imp-set-4')
+            } else if (test==101) {
+                hideEl('imp-set-5')
             }
         } else {
             if (set==1) {
@@ -34,6 +38,12 @@ function loadDiv() {
                 set++
             } else if (set==2) {
                 showEl('imp-set-3')
+                set++
+            } else if (set==3) {
+                showEl('imp-set-4')
+                set++
+            } else if (set==4) {
+                showEl('imp-set-5')
                 set++
             }
         }
