@@ -4,7 +4,8 @@ var end=start
 
 var testType='intro'
 var test=0
-var MAXtests=43 + 1 // change!!!
+var set=1
+var MAXtests=80 + 1 // change!!!
 
 var times=[]
 var answers=[]
@@ -17,6 +18,32 @@ function showEl(_id) {
     el.className = el.className.replace( /(?:^|\s)imp-hidden(?!\S)/g , '' )
 }
 
+function loadDiv() {
+    if (test!==MAXtests) hideEl('imp-'+test)
+    if (test<MAXtests) {
+        if ( !(set==1&&test==20) && !(set==2&&test==40) ) {
+            showEl('imp-'+(++test))
+            if (test==21) {
+                hideEl('imp-set-2')
+            } else if (test==41) {
+                hideEl('imp-set-3')
+            }
+        } else {
+            if (set==1) {
+                showEl('imp-set-2')
+                set++
+            } else if (set==2) {
+                showEl('imp-set-3')
+                set++
+            }
+        }
+    //                window.location.hash = '#'+test
+        start=performance.now()
+    } else {
+//        alert('thanks!')
+    }
+}
+
 function pressE(){
     end=performance.now()
     console.log('e', end-start)
@@ -24,14 +51,7 @@ function pressE(){
     answers.push(0)
 
     // load div
-    if (test!==MAXtests) hideEl('imp-'+test)
-    if (test<MAXtests) {
-        showEl('imp-'+(++test))
-//                window.location.hash = '#'+test
-        start=performance.now()
-    } else {
-//        alert('thanks!')
-    }
+    loadDiv();
 }
 
 function pressI(){
@@ -41,14 +61,7 @@ function pressI(){
     answers.push(1)
 
     // load div
-    if (test!==MAXtests) hideEl('imp-'+test)
-    if (test<MAXtests) {
-        showEl('imp-'+(++test))
-    //                window.location.hash = '#'+test
-        start=performance.now()
-    } else {
-//        alert('thanks!')
-    }
+    loadDiv();
 }
 
 document.onkeypress = function(e) {
