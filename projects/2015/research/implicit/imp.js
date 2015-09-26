@@ -71,7 +71,7 @@ function pressE(){
     }
 
     // var x=$('#imp-'+test+' .imp-ans')[0].innerHTML
-    var x=document.getElementById("imp-"+test).getElementsByClassName("imp-ans")[0]
+    var x=document.getElementById("imp-"+test).getElementsByClassName("imp-ans")[0].innerHTML
     if (x!=='1' && x!=='3') {
         console.log('pressE(',x,')')
         if (err)
@@ -124,7 +124,8 @@ function pressI(){
         return
     }
 
-    var x=$('#imp-'+test+' .imp-ans')[0].innerHTML
+    // var x=$('#imp-'+test+' .imp-ans')[0].innerHTML
+    var x=document.getElementById("imp-"+test).getElementsByClassName("imp-ans")[0].innerHTML
     if (x!=='2' && x!=='3') {
         console.log('pressI(',x,')')
         if (err)
