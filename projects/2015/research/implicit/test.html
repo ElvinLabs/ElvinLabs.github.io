@@ -1,0 +1,1694 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <title>Elvins - Research 2015</title>
+    
+    <link rel="stylesheet" href="implicit.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+</head>
+<body>
+    
+    <div class="imp-notify">
+        <br><br>
+<!--        <p>Press [e] for left & [i] for right</p>-->
+<!--        <p id="imp-out">Press start when ready!</p>-->
+    </div>
+    
+    <div class="imp-container">
+
+        <div class="imp-cross imp-hidden" id="imp-cross">
+            <p class="imp-text imp-cross-text">ඔබේ පිළිතුර නැවත සලකා බලන්න</p>
+            <img src="pics/cross.png" class="imp-cross-img" width="80px">
+        </div>
+        
+        
+        <div class="imp-test imp-word-test" id="imp-0">
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක</button>
+            </div><span class='imp-ans'>3</span>
+            <div class="imp-test-instance">
+<!--                <div class="imp-pic-helper"></div>-->
+                <div class="imp-word imp-text imp-long-text">
+                    වම් පස ඇති කාණ්ඩ සඳහා e අකුරත් දකුණ පස ඇති කාණ්ඩ සඳහා i අකුරත් භාවිතා කරන්න.<br>
+ඉහලින් දිස්වන ලේබල් මඟින් ඔබට කුමන කාණ්ඩයක් කුමන දිශාවට යා යුතුයැයිි පෙන්වයි.<br>
+සෑම වචනයක් හා පින්තූරයක් හට නිසි කාණ්ඩයක් ඇත.<br>
+වචනයක් හෝ පින්තූරයක් වැරදි දිශාවට යොමු කලොත් ඉන් පසු නිවැරදි දිශාව වෙත යොමුකර ඉදිරියට යා හැක.<br><br>
+පටන්ගැනීමට e හෝ i ඔබන්න
+                </div>
+            </div>
+        </div>
+        
+        
+        <!--
+        සතුට, ආදරය සන්තාපය, විනෝදය දරුණු, භයානක, ප්‍රීතිය නින්දිත සාමකාමි, නපුරු, ආරක්ෂාව, සන්සුන් බව වේදනාකාරී, සමඟිය, භයංකර, අසිරිමත්, ඛේදජනක, පීඩාකාරි, සැප ක්‍රෝධය
+
+        2,3,14,1,19,18,5,12,7,11,4,17,6,9,20,13,16,8,15,10 (only pics)
+
+        5, ආදරය, 13, දරුණු, ප්‍රීතිය, 9, නින්දිත, 18, 3, 14, සතුට, විනෝදය, සන්තාපය, 10, 16, භයානක, 1, ආරක්ෂාව, 12, වේදනාකාරී,
+        11, 2, 15, සමඟිය, ඛේදජනක, 4, 17, ක්‍රෝධය, 8, පීඩාකාරි, සැප, 19, භයංකර, සන්සුන් බව, 7, නපුරු, 20, සාමකාමි, 6, අසිරිමත්
+
+        ක්‍රෝධය සැප පීඩාකාරි, ඛේදජනක අසිරිමත්, භයංකර, සමඟිය, වේදනාකාරී, සන්සුන් බව ආරක්ෂාව නපුරු සාමකාමි නින්දිත ප්‍රීතිය භයානක, දරුණු, විනෝදය සන්තාපය, ආදරය සතුට
+
+        වේදනාකාරී, 6, සන්සුන් බව, 20, 7, 19, ආරක්ෂාව, නපුරු, සාමකාමි, 8, 17, නින්දිත, 4, ප්‍රීතිය,15, භයානක, දරුණු, 2, විනෝදය, 11, 
+        12, සන්තාපය, 1, 16, 10, ආදරය, සතුට, ක්‍රෝධය, 14, සැප, 3, පීඩාකාරි, 18, ඛේදජනක, 9, 13, 5, අසිරිමත්, භයංකර, සමඟිය 
+        -->
+
+        <!-- 
+        //5,13,9,18,3,14,10,16,1,12,11,2,15,4,17,8,19,7,20,6 (mix 1)
+        //6,20,7,19,8,17,4,15,2,11,12,1,16,10,14,3,18,9,13,5(mix 2)
+         -->
+
+
+        <!-- හොඳ/නරක -->
+                
+        <div class="imp-test imp-word-test imp-hidden" id="imp-1" goo>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">සතුට</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-word-test imp-hidden" id="imp-2" goo>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">ආදරය</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-word-test imp-hidden" id="imp-3" goo>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">සන්තාපය</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-word-test imp-hidden" id="imp-4" goo>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">විනෝදය</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-word-test imp-hidden" id="imp-5" goo>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">දරුණු</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-word-test imp-hidden" id="imp-6" goo>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">භයානක</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-word-test imp-hidden" id="imp-7" goo>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">ප්‍රීතිය</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-word-test imp-hidden" id="imp-8" goo>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">නින්දිත</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-word-test imp-hidden" id="imp-9" goo>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">සාමකාමි</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-word-test imp-hidden" id="imp-10" goo>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">නපුරු</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-word-test imp-hidden" id="imp-11" viol>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">ආරක්ෂාව</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-word-test imp-hidden" id="imp-12" viol>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">සන්සුන් බව</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-word-test imp-hidden" id="imp-13" viol>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">වේදනාකාරී</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-word-test imp-hidden" id="imp-14" viol>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">සමඟිය</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-word-test imp-hidden" id="imp-15" viol>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">භයංකර</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-word-test imp-hidden" id="imp-16" viol>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">අසිරිමත්</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-word-test imp-hidden" id="imp-17" viol>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">ඛේදජනක</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-word-test imp-hidden" id="imp-18" viol>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">පීඩාකාරි</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-word-test imp-hidden" id="imp-19" viol>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">සැප</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-word-test imp-hidden" id="imp-20" viol>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">ක්‍රෝධය</div>
+            </div>
+        </div>
+        
+        <!-- CODE -->
+        <!-- <script type="text/javascript" src='//code.jquery.com/jquery-2.1.4.min.js'></script> -->
+        <script src="imp.js"></script> <!-- before pics -->
+        
+        <!-- PICTURES -->
+
+        <div class="imp-test imp-word-test imp-hidden" id="imp-set-2">
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>3</span>
+            <div class="imp-test-instance">
+<!--                <div class="imp-pic-helper"></div>-->
+                <div class="imp-word imp-text imp-long-text">ඉහලින් දිස්වන කාණ්ඩ/ලෙබල් මාරු වී ඇත</div>
+            </div>
+        </div>
+
+
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-21" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/2.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-22" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/3.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-23" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/14.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-24" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/1.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-25" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/19.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-26" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/18.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-27" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/5.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-28" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/12.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-29" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/7.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-30" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/11.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-31" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/4.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-32" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/17.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-33" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/6.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-34" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/9.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-35" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/20.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-36" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/13.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-37" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/16.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-38" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/8.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-39" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/15.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-40" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/10.jpg'></div>
+            </div>
+        </div>
+        
+        <!-- DOUBLE MIX -->
+
+        <div class="imp-test imp-word-test imp-hidden" id="imp-set-3">
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>3</span>
+            <div class="imp-test-instance">
+<!--                <div class="imp-pic-helper"></div>-->
+                <div class="imp-word imp-text imp-long-text">
+                    ඉහලින් කාණ්ඩ/ලේබල් 2 බැගින් ඇත.<br>
+වඩාත් ගැල්පෙන කාණ්ඩය තෝරන්න.
+                </div>
+            </div>
+        </div>
+
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-41" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/5.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-42" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word ">ආදරය</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-43" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/13.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-44" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word ">දරුණු</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-45" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word ">ප්‍රීතිය</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-46" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/9.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-47" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word ">නින්දිත</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-48" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/18.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-49" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/3.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-50" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/14.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-51" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word ">සතුට</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-52" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word ">විනෝදය</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-53" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word ">සන්තාපය</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-54" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/10.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-55" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/16.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-56" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word ">භයානක</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-57" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/1.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-58" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word ">ආරක්ෂාව</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-59" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/12.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-60" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word ">වේදනාකාරී</div>
+            </div>
+        </div>
+
+
+        <!-- == 2 -->
+
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-61" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/11.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-62" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/2.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-63" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/15.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-64" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word ">සමඟිය</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-65" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word ">ඛේදජනක</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-66" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/4.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-67" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/17.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-68" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word ">ක්‍රෝධය</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-69" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/8.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-70" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word ">පීඩාකාරි</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-71" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word ">සැප</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-72" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/19.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-73" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word ">භයංකර</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-74" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word ">සන්සුන් බව</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-75" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/7.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-76" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word ">නපුරු</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-77" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/20.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-78" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word ">සාමකාමි</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-79" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/6.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-80" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>හොඳ<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>නරක<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word ">අසිරිමත්</div>
+            </div>
+        </div>
+
+
+        <!-- DOUBLE WORDS -->
+
+        <div class="imp-test imp-word-test imp-hidden" id="imp-set-4">
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>3</span>
+            <div class="imp-test-instance">
+<!--                <div class="imp-pic-helper"></div>-->
+                <div class="imp-word imp-text imp-long-text">ඉහලින් දිස්වන කාණ්ඩ/ලෙබල් මාරු වී ඇත</div>
+            </div>
+        </div>
+
+
+
+        <div class="imp-test imp-word-test imp-hidden" id="imp-81" goo>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">ක්‍රෝධය</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-word-test imp-hidden" id="imp-82" goo>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">සැප</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-word-test imp-hidden" id="imp-83" goo>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">පීඩාකාරි</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-word-test imp-hidden" id="imp-84" goo>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">ඛේදජනක</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-word-test imp-hidden" id="imp-85" goo>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">අසිරිමත්</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-word-test imp-hidden" id="imp-86" goo>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">භයංකර</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-word-test imp-hidden" id="imp-87" goo>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">සමඟිය</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-word-test imp-hidden" id="imp-88" goo>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">වේදනාකාරී</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-word-test imp-hidden" id="imp-89" goo>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">සන්සුන් බව</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-word-test imp-hidden" id="imp-90" goo>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">ආරක්ෂාව</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-word-test imp-hidden" id="imp-91" viol>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">නපුරු</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-word-test imp-hidden" id="imp-92" viol>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">සාමකාමි</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-word-test imp-hidden" id="imp-93" viol>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">නින්දිත</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-word-test imp-hidden" id="imp-94" viol>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">ප්‍රීතිය</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-word-test imp-hidden" id="imp-95" viol>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">භයානක</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-word-test imp-hidden" id="imp-96" viol>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">දරුණු</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-word-test imp-hidden" id="imp-97" viol>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">විනෝදය</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-word-test imp-hidden" id="imp-98" viol>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">සන්තාපය</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-word-test imp-hidden" id="imp-99" viol>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">ආදරය</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-word-test imp-hidden" id="imp-100" viol>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය නොවන</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">සතුට</div>
+            </div>
+        </div>
+
+        <!-- DOUBLE MIX [2] -->
+
+        <div class="imp-test imp-word-test imp-hidden" id="imp-set-5">
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය නොවන</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය</button>
+            </div><span class='imp-ans'>3</span>
+            <div class="imp-test-instance">
+<!--                <div class="imp-pic-helper"></div>-->
+                <div class="imp-word imp-text imp-long-text">ඉහලින් දිස්වන කාණ්ඩ/ලෙබල් මාරු වී ඇත</div>
+            </div>
+        </div>
+
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-101" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය නොවන</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">වේදනාකාරී</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-102" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය නොවන</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/6.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-103" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය නොවන</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">සන්සුන් බව</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-104" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය නොවන</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/20.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-105" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය නොවන</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/7.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-106" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය නොවන</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/19.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-107" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය නොවන</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">ආරක්ෂාව</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-108" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය නොවන</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">නපුරු</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-109" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය නොවන</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">සාමකාමි</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-110" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය නොවන</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/8.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-111" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය නොවන</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/17.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-112" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය නොවන</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">නින්දිත</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-113" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය නොවන</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/4.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-114" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය නොවන</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">ප්‍රීතිය</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-115" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය නොවන</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/15.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-116" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය නොවන</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">භයානක</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-117" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය නොවන</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">දරුණු</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-118" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය නොවන</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/2.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-119" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය නොවන</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">විනෝදය</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-120" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය නොවන</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/11.jpg'></div>
+            </div>
+        </div>
+
+
+        <!-- == 2 -->
+
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-121" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය නොවන</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/12.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-122" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය නොවන</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">සන්තාපය</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-123" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය නොවන</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/1.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-124" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය නොවන</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/16.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-125" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය නොවන</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/10.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-126" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය නොවන</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">ආදරය</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-127" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය නොවන</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">සතුට</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-128" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය නොවන</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">ක්‍රෝධය</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-129" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය නොවන</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/14.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-130" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය නොවන</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">සැප</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-131" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය නොවන</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/3.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-132" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය නොවන</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">පීඩාකාරි</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-133" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය නොවන</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/18.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-134" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය නොවන</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">ඛේදජනක</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-135" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය නොවන</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/9.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-136" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය නොවන</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/13.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-137" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය නොවන</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-pic"><img src='pics/5.jpg'></div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-138" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය නොවන</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">අසිරිමත්</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-139" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය නොවන</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය</button>
+            </div><span class='imp-ans'>1</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">භයංකර</div>
+            </div>
+        </div>
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-140" pic>
+            <div class="imp-categories">
+                <button class="imp-category-left" onclick='pressE()'>නරක<br>හිංසනය නොවන</button>
+                <button class="imp-category-right" onclick='pressI()'>හොඳ<br>හිංසනය</button>
+            </div><span class='imp-ans'>2</span>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word">සමඟිය</div>
+            </div>
+        </div>
+
+        
+        <!-- DONE!!! -->
+        
+        <div class="imp-test imp-pic-test imp-hidden" id="imp-141" pic>
+            <div class="imp-test-instance">
+                <div class="imp-pic-helper"></div>
+                <div class="imp-word"></div>
+                <button class="btn btn-default" id="ButtonSubmit" onclick="" type="button" >ඉදිරියට</button>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+    
+<!--    <script src="imp.js"></script>-->
+</body>
+</html>

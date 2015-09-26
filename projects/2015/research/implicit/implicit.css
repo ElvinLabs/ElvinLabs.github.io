@@ -132,3 +132,12 @@ button.imp-category-right {
     display: block;
     position: relative;
 }
+
+.btn {
+    color: #333;
+    text-decoration: none;
+    border: 1px solid #aaa;
+    background-color: #eee;
+    padding: 10px;
+    font-size: 20px;
+}
