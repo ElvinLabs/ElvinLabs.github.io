@@ -1,5 +1,5 @@
 function start() {
-    var myWindow = window.open("details/index.html", "", "scrollbars=yes, resizable=yes, width=900, height=500");
+    var myWindow = window.open("details/index.html", "", "scrollbars=yes, resizable=yes");
 }
 
 function postContactToGoogle() {
