@@ -54,21 +54,109 @@ function loadDiv() {
     }
 }
 
+var err=false
+
 function pressE(){
+
+    if (
+        test==0
+        || ( test==20 && set==2)
+        || ( test==40 && set==3)
+        || ( test==80 && set==4)
+        || (test==100 && set==5)
+    ) {
+        err=false
+        loadDiv();
+        return
+    }
+
+    var x=$('#imp-'+test+' .imp-ans')[0].innerHTML
+    if (x!=='1' && x!=='3') {
+        console.log('pressE(',x,')')
+        if (err)
+            return
+        err=true
+        showEl('imp-cross')
+        console.log(answers)
+        console.log(times)
+        end=performance.now()
+        console.log('e: wrong', end-start)
+        times.push(end-start)
+        answers.push(0)
+        return;
+    }
+
+    hideEl('imp-cross')
     end=performance.now()
     console.log('e', end-start)
-    times.push(end-start)
-    answers.push(0)
+    if (
+        test==0
+        || ( test==20 && set==2)
+        || ( test==40 && set==3)
+        || ( test==80 && set==4)
+        || (test==100 && set==5)
+    )
+        err=true
+    if (!err) {
+        times.push(end-start)
+        answers.push(1)
+    }
+    console.log(answers)
+    console.log(times)
+    err=false
 
     // load div
     loadDiv();
 }
 
 function pressI(){
+
+    if (
+        test==0
+        || ( test==20 && set==2)
+        || ( test==40 && set==3)
+        || ( test==80 && set==4)
+        || (test==100 && set==5)
+    ) {
+        err=false
+        loadDiv();
+        return
+    }
+
+    var x=$('#imp-'+test+' .imp-ans')[0].innerHTML
+    if (x!=='2' && x!=='3') {
+        console.log('pressI(',x,')')
+        if (err)
+            return
+        err=true
+        showEl('imp-cross')
+        console.log(answers)
+        console.log(times)
+        end=performance.now()
+        console.log('i: wrong', end-start)
+        times.push(end-start)
+        answers.push(0)
+        return;
+    }
+
+    hideEl('imp-cross')
     end=performance.now()
     console.log('i', end-start)
-    times.push(end-start)
-    answers.push(1)
+    if (
+        test==0
+        || ( test==20 && set==2)
+        || ( test==40 && set==3)
+        || ( test==80 && set==4)
+        || (test==100 && set==5)
+    )
+        err=true
+    if (!err) {
+        times.push(end-start)
+        answers.push(1)
+    }
+    console.log(answers)
+    console.log(times)
+    err=false
 
     // load div
     loadDiv();
