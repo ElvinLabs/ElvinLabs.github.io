@@ -70,7 +70,8 @@ function pressE(){
         return
     }
 
-    var x=$('#imp-'+test+' .imp-ans')[0].innerHTML
+    // var x=$('#imp-'+test+' .imp-ans')[0].innerHTML
+    var x=document.getElementById("imp-"+test).getElementsByClassName("imp-ans")[0]
     if (x!=='1' && x!=='3') {
         console.log('pressE(',x,')')
         if (err)
