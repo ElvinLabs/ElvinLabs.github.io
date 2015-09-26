@@ -8,6 +8,11 @@
 	<meta name="author" content="elvinlabs">
 
 	<script type="text/javascript" src="../js/main.js"></script>
+    <script type="text/javascript">
+        window.onbeforeunload = function() {
+            window.open('','_self').close();
+        }
+    </script>
 
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
   <!--[if lt IE 9]>
