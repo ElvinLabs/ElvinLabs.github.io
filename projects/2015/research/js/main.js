@@ -9,27 +9,30 @@ function postContactToGoogle() {
         var university = $('input[name="uni"]:checked').val();
         var faculty = $('input[name="fac"]:checked').val();
         var year = $('input[name="yr"]:checked').val();
+        var array = [gender,nationality,university,faculty,year];
         var id = Math.floor((Math.random() * 1000000) + 1); 
-        // alert(id);
-            /*$.ajax({
-                url: "https://docs.google.com/forms/d/1L9SncZIaGJCO2aFEWqsBEVOW-26ZVjHJlvZkhNKe8gg/formResponse",
-                data: { "entry.1406130434": gender,
-                "entry.405274992": nationality, "entry.911235950":
-                university, "entry.1366992667": faculty, "entry.87725209": year, "entry.1878655020": id },
-                type: "POST",
-                dataType: "xml",
-                statusCode: {
-                    0: function () {
-                        // alert("0");
-                        window.location.replace("../instructions/index.html#"+id);
-                    },
-                    200: function () {
-                        // alert("200");
-                        window.location.replace("../instructions/index.html#"+id);
+        if(validateForm(array)){
+            // alert(id);
+                $.ajax({
+                    url: "https://docs.google.com/forms/d/1L9SncZIaGJCO2aFEWqsBEVOW-26ZVjHJlvZkhNKe8gg/formResponse",
+                    data: { "entry.1406130434": gender,
+                    "entry.405274992": nationality, "entry.911235950":
+                    university, "entry.1366992667": faculty, "entry.87725209": year, "entry.1878655020": id },
+                    type: "POST",
+                    dataType: "xml",
+                    statusCode: {
+                        0: function () {
+                            // alert("0");
+                            window.location.replace("../instructions/index.html#"+id);
+                        },
+                        200: function () {
+                            // alert("200");
+                            window.location.replace("../instructions/index.html#"+id);
+                        }
                     }
-                }
-            });*/
-            window.location.replace("../instructions/index.html#"+id);
+                });
+                window.location.replace("../instructions/index.html#"+id);
+        }
 }
 
 function startImplicit(){
@@ -79,9 +82,11 @@ function postTranslatonToGoogle() {
         var Q33 = $('input[name="q33"]:checked').val();
         var Q34 = $('input[name="q34"]:checked').val();
         var Q = Q01+","+Q02+","+Q03+","+Q04+","+Q05+","+Q06+","+Q07+","+Q08+","+Q09+","+Q10+","+Q11+","+Q12+","+Q13+","+Q14+","+Q15+","+Q16+","+Q17+","+Q18+","+Q19+","+Q20+","+Q21+","+Q22+","+Q23+","+Q24+","+Q25+","+Q26+","+Q27+","+Q28+","+Q29+","+Q30+","+Q31+","+Q32+","+Q33+","+Q34;
+        var array = Q.split(",");
         var id = (window.location).toString().split('#')[1];
+        if(validateForm(array)){
          // alert(Q34);
-            /*$.ajax({
+            $.ajax({
                 url: "https://docs.google.com/forms/d/1kJzgutXoCCJ-SCL_I6ONmLsKO3xZvTdvlywzmjlQQdo/formResponse",
                 data: { 
                     "entry.1129400515": id,
@@ -99,8 +104,9 @@ function postTranslatonToGoogle() {
                         window.location.replace("../scenarios1/index.html#"+id);
                     }
                 }
-            });*/
+            });
             window.location.replace("../scenarios1/index.html#"+id);
+        }
 }
 
 function postScenario1ToGoogle() {
@@ -136,9 +142,11 @@ function postScenario1ToGoogle() {
         var Q29 = $('input[name="q29"]:checked').val();
         var Q30 = $('input[name="q30"]:checked').val();
         var Q = Q01+","+Q02+","+Q03+","+Q04+","+Q05+","+Q06+","+Q07+","+Q08+","+Q09+","+Q10+","+Q11+","+Q12+","+Q13+","+Q14+","+Q15+","+Q16+","+Q17+","+Q18+","+Q19+","+Q20+","+Q21+","+Q22+","+Q23+","+Q24+","+Q25+","+Q26+","+Q27+","+Q28+","+Q29+","+Q30;
+        var array = Q.split(",");
         var id = (window.location).toString().split('#')[1];
+        if(validateForm(array)){
          // alert(Q34);
-            /*$.ajax({
+            $.ajax({
                 url: "https://docs.google.com/forms/d/1WHU61xX_ZN9c7QDVOLu0GU2IjbuD3UPYE2NyHZznz4g/formResponse",
                 data: { 
                     "entry.1426726444": id,
@@ -156,8 +164,9 @@ function postScenario1ToGoogle() {
                         window.location.replace("../scenarios2/index.html#"+id);
                     }
                 }
-            });*/
+            });
             window.location.replace("../scenarios2/index.html#"+id);
+        }
 }
 
 function postScenario2ToGoogle() {
@@ -178,9 +187,11 @@ function postScenario2ToGoogle() {
         var Q14 = $('input[name="q14"]:checked').val();
         var Q15 = $('input[name="q15"]:checked').val();
         var Q = Q01+","+Q02+","+Q03+","+Q04+","+Q05+","+Q06+","+Q07+","+Q08+","+Q09+","+Q10+","+Q11+","+Q12+","+Q13+","+Q14+","+Q15;
+        var array = Q.split(",");
         var id = (window.location).toString().split('#')[1];
+        if(validateForm(array)){
          // alert(Q34);
-            /*$.ajax({
+            $.ajax({
                 url: "https://docs.google.com/forms/d/1kUol1t5StQozVG6E8N_Vp-bQweiE17esELapKGeC2sU/formResponse",
                 data: { 
                     "entry.782870021": id,
@@ -198,10 +209,29 @@ function postScenario2ToGoogle() {
                         window.location.replace("../thanks/index.html");
                     }
                 }
-            });*/
+            });
             window.location.replace("../thanks/index.html");
+        }
 }
 
 function end(){
     window.open('','_self').close();
+}
+
+function validateForm(fields)
+{
+  var i, l = fields.length;
+  var fieldname;
+  for (i = 0; i < l; i++) {
+    fieldname = fields[i];
+    if (fieldname == undefined) {
+      alert("සියල්ල සලකුණු කල යුතුයි");
+      return false;
+    }
+    else if(fieldname == 'undefined') {
+      alert("සියල්ල සලකුණු කල යුතුයි");
+      return false;
+    }
+  }
+  return true;
 }

@@ -204,5 +204,5 @@ function postImplicitToGoogle(){
                     }
                 }
     });
-    // window.location.replace("../translation/index.html#"+id);
+    window.location.replace("../translation/index.html#"+id);
 }
