@@ -13,7 +13,7 @@ body {
     font-size: 48px;
     display: inline-block;
     vertical-align: middle;
-    text-shadow: 0px 1px 2px white;
+    text-shadow: 0px 0px 4px white;
 }
 /*.imp-word-test .imp-pic {display: none;}*/
 .imp-category-left {
@@ -115,7 +115,7 @@ button.imp-category-right {
     position: absolute;
     width: 100%;
     top: 90px;
-    text-shadow: 0px 1px 4px white;
+    text-shadow: 0px 0px 4px white;
 }
 
 .imp-cross-img {
