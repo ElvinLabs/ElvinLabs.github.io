@@ -195,11 +195,11 @@ function postImplicitToGoogle(){
                 dataType: "xml",
                 statusCode: {
                     0: function () {
-                         alert("Error 0");
+                         // alert("Error 0");
                         window.location.replace("../translation/index.html#"+id);
                     },
                     200: function () {
-                         alert("Success 200");
+                         // alert("Success 200");
                         window.location.replace("../translation/index.html#"+id);
                     }
                 }
