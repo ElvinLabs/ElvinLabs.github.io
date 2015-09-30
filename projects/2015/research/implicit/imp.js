@@ -81,15 +81,15 @@ function pressE(){
         console.log(answers)
         console.log(times)
         end=performance.now()
-        console.log('e: wrong', end-start)
-        times.push(end-start)
+        console.log('e: wrong', Math.ceil((end-start)*1000)/1000)
+        times.push(Math.ceil((start-end)*1000)/1000)
         answers.push(0)
         return;
     }
 
     hideEl('imp-cross')
     end=performance.now()
-    console.log('e', end-start)
+    console.log('e', Math.ceil((end-start)*1000)/1000)
     if (
         test==0
         || ( test==20 && set==2)
@@ -99,7 +99,7 @@ function pressE(){
     )
         err=true
     if (!err) {
-        times.push(end-start)
+        times.push(Math.ceil((end-start)*1000)/1000)
         answers.push(1)
     }
     console.log(answers)
@@ -135,15 +135,15 @@ function pressI(){
         console.log(answers)
         console.log(times)
         end=performance.now()
-        console.log('i: wrong', end-start)
-        times.push(end-start)
+        console.log('i: wrong', Math.ceil((end-start)*1000)/1000)
+        times.push(Math.ceil((start-end)*1000)/1000)
         answers.push(0)
         return;
     }
 
     hideEl('imp-cross')
     end=performance.now()
-    console.log('i', end-start)
+    console.log('i', Math.ceil((end-start)*1000)/1000)
     if (
         test==0
         || ( test==20 && set==2)
@@ -153,7 +153,7 @@ function pressI(){
     )
         err=true
     if (!err) {
-        times.push(end-start)
+        times.push(Math.ceil((end-start)*1000)/1000)
         answers.push(1)
     }
     console.log(answers)
@@ -181,3 +181,28 @@ document.onkeypress = function(e) {
         }
     }
 };
+
+function postImplicitToGoogle(){
+    var id = (window.location).toString().split('#')[1];
+    var ans = times.join(", ");
+    $.ajax({
+                url: "https://docs.google.com/forms/d/14fAyDloQJrVe6462PE_liiTmih6DyCPK8JauuIVE3gs/formResponse",
+                data: { 
+                    "entry.715380020": id,
+                    "entry.1912938860": ans
+                },
+                type: "POST",
+                dataType: "xml",
+                statusCode: {
+                    0: function () {
+                         // alert("Error 0");
+                        window.location.replace("../translation/index.html#"+id);
+                    },
+                    200: function () {
+                         // alert("Success 200");
+                        window.location.replace("../translation/index.html#"+id);
+                    }
+                }
+    });
+    window.location.replace("../translation/index.html#"+id);
+}
