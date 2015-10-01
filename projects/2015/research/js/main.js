@@ -9,7 +9,6 @@ function postContactToGoogle() {
         var age = $('input[name="age"]:checked').val();
         var faculty = $('input[name="fac"]:checked').val();
         var city = $('input[name="city"]:checked').val();
-        var array = [gender,nationality,university,faculty,year];
         var id = Math.floor((Math.random() * 1000000) + 1); 
         if(1){
             // alert(id);
