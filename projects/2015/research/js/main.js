@@ -12,13 +12,22 @@ function postContactToGoogle() {
         city = $('input[name="city"]:checked').val();
         var id = Math.floor((Math.random() * 1000000) + 1);
         if (gender == undefined) {
-    		alert("1");
+    		gender = "not entered";
 	}
-	else if(gender == 'undefined') {
-	    	alert("2");
+        if (nationality == undefined) {
+    		nationality = "not entered";
+	}
+        if (age == undefined) {
+    		age = "not entered";
+	}
+        if (faculty == undefined) {
+    		faculty = "not entered";
+	}
+        if (city == undefined) {
+    		city = "not entered";
 	}
         if(1){
-            	//alert(gender);
+            	alert(gender);
                 $.ajax({
                     url: "https://docs.google.com/forms/d/1IB8Ffk0TcJHu8mmFOLAtJtuF7LDqbcMCS95-RCB3n14/formResponse",
                     data: { "entry.1871888126": gender,
