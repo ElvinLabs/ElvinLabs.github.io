@@ -12,7 +12,7 @@ function postContactToGoogle() {
         city = $('input[name="city"]:checked').val();
         var id = Math.floor((Math.random() * 1000000) + 1); 
         if(1){
-            	alert(id);
+            	alert(gender);
                 $.ajax({
                     url: "https://docs.google.com/forms/d/1IB8Ffk0TcJHu8mmFOLAtJtuF7LDqbcMCS95-RCB3n14/formResponse",
                     data: { "entry.1871888126": gender,
