@@ -10,9 +10,15 @@ function postContactToGoogle() {
         age = $('input[name="age"]:checked').val();
         faculty = $('input[name="fac"]:checked').val();
         city = $('input[name="city"]:checked').val();
-        var id = Math.floor((Math.random() * 1000000) + 1); 
+        var id = Math.floor((Math.random() * 1000000) + 1);
+        if (gender == undefined) {
+    		alert("1")
+	}
+	else if(gender == 'undefined') {
+	    	alert("2")
+	}
         if(1){
-            	alert(gender);
+            	//alert(gender);
                 $.ajax({
                     url: "https://docs.google.com/forms/d/1IB8Ffk0TcJHu8mmFOLAtJtuF7LDqbcMCS95-RCB3n14/formResponse",
                     data: { "entry.1871888126": gender,
@@ -22,11 +28,11 @@ function postContactToGoogle() {
                     dataType: "xml",
                     statusCode: {
                         0: function () {
-                            alert("0");
+                            //alert("0");
                             window.location.replace("../instructions/index.html#"+id);
                         },
                         200: function () {
-                            alert("200");
+                            //alert("200");
                             window.location.replace("../instructions/index.html#"+id);
                         }
                     }
