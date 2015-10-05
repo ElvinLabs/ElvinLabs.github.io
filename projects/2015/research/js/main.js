@@ -12,10 +12,10 @@ function postContactToGoogle() {
         city = $('input[name="city"]:checked').val();
         var id = Math.floor((Math.random() * 1000000) + 1);
         if (gender == undefined) {
-    		alert("1")
+    		alert("1");
 	}
 	else if(gender == 'undefined') {
-	    	alert("2")
+	    	alert("2");
 	}
         if(1){
             	//alert(gender);
