@@ -12,7 +12,7 @@ function postContactToGoogle() {
         city = $('input[name="city"]:checked').val();
         var id = Math.floor((Math.random() * 1000000) + 1); 
         if(1){
-            // alert(id);
+            	alert(id);
                 $.ajax({
                     url: "https://docs.google.com/forms/d/1L9SncZIaGJCO2aFEWqsBEVOW-26ZVjHJlvZkhNKe8gg/formResponse",
                     data: { "entry.1406130434": gender,
@@ -22,11 +22,11 @@ function postContactToGoogle() {
                     dataType: "xml",
                     statusCode: {
                         0: function () {
-                            // alert("0");
+                            alert("0");
                             window.location.replace("../instructions/index.html#"+id);
                         },
                         200: function () {
-                            // alert("200");
+                            alert("200");
                             window.location.replace("../instructions/index.html#"+id);
                         }
                     }
