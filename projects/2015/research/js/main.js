@@ -4,11 +4,12 @@ function start() {
 
 function postContactToGoogle() {
 		// alert("called");
-        var gender = $('input[name="gender"]:checked').val();
-        var nationality = $('input[name="nat"]:checked').val();
-        var age = $('input[name="age"]:checked').val();
-        var faculty = $('input[name="fac"]:checked').val();
-        var city = $('input[name="city"]:checked').val();
+	var gender = "dummy"; var nationality = "dummy"; var age = "dummy"; var faculty = "dummy"; var city = "dummy";
+        gender = $('input[name="gender"]:checked').val();
+        nationality = $('input[name="nat"]:checked').val();
+        age = $('input[name="age"]:checked').val();
+        faculty = $('input[name="fac"]:checked').val();
+        city = $('input[name="city"]:checked').val();
         var id = Math.floor((Math.random() * 1000000) + 1); 
         if(1){
             // alert(id);
