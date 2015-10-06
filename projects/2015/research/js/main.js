@@ -111,16 +111,16 @@ function postTranslatonToGoogle() {
                 dataType: "xml",
                 statusCode: {
                     0: function () {
-                        // alert("Error 0");
+                        alert("Please continue the test");
                         window.location.replace("../scenarios1/index.html#"+id);
                     },
                     200: function () {
-                         // alert("Success 200");
+                        alert("Please continue the test");
                         window.location.replace("../scenarios1/index.html#"+id);
                     }
                 }
             });
-            window.location.replace("../scenarios1/index.html#"+id);
+            //window.location.replace("../scenarios1/index.html#"+id);
         }
 }
 
@@ -171,16 +171,16 @@ function postScenario1ToGoogle() {
                 dataType: "xml",
                 statusCode: {
                     0: function () {
-                        // alert("Error 0");
+                        alert("Please continue the test");
                         window.location.replace("../scenarios2/index.html#"+id);
                     },
                     200: function () {
-                         // alert("Success 200");
+                        alert("Please continue the test");
                         window.location.replace("../scenarios2/index.html#"+id);
                     }
                 }
             });
-            window.location.replace("../scenarios2/index.html#"+id);
+            //window.location.replace("../scenarios2/index.html#"+id);
         }
 }
 
@@ -216,16 +216,16 @@ function postScenario2ToGoogle() {
                 dataType: "xml",
                 statusCode: {
                     0: function () {
-                        // alert("Error 0");
+                        alert("Please continue the test");
                         window.location.replace("../thanks/index.html");
                     },
                     200: function () {
-                        // alert("Success 200");
+                        alert("Please continue the test");
                         window.location.replace("../thanks/index.html");
                     }
                 }
             });
-            window.location.replace("../thanks/index.html");
+            //window.location.replace("../thanks/index.html");
         }
 }
 
