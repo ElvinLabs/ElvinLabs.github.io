@@ -195,14 +195,14 @@ function postImplicitToGoogle(){
                 dataType: "xml",
                 statusCode: {
                     0: function () {
-                         // alert("Error 0");
+                        alert("Thank you, Please continue the test");
                         window.location.replace("../translation/index.html#"+id);
                     },
                     200: function () {
-                         // alert("Success 200");
+                        alert("Thank you, Please continue the test");
                         window.location.replace("../translation/index.html#"+id);
                     }
                 }
     });
-    window.location.replace("../translation/index.html#"+id);
+    // window.location.replace("../translation/index.html#"+id);
 }
